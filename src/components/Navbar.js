@@ -21,7 +21,7 @@ const Navbar = () => {
                     <AiOutlineMenu size={30} />
                 </div>
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-                    Лучшая <span className="font-bold">Еда</span>
+                   <span className="font-bold">еDa</span>livery
                 </h1>
                 <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
                     <p className="bg-black text-white rounded-full p-2">Доставка</p>
