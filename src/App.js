@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import HeadLineCards from "./components/HeadLineCards";
 import Food from "./components/Food";
+import Category from "./components/Category";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <HeadLineCards />
       <Food />
+      <Category />
     </div>
   );
 }

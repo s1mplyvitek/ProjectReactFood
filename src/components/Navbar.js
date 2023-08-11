@@ -8,7 +8,7 @@ import { FaUserFriends, FaWallet } from "react-icons/fa";
 const Navbar = () => {
 
     const [nav, setNav] = useState(false)
-
+    const [deliv, setDeliv] = useState(true)
 
 
     return (
@@ -23,9 +23,9 @@ const Navbar = () => {
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
                    <span className="font-bold">еDa</span>livery
                 </h1>
-                <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
-                    <p className="bg-black text-white rounded-full p-2">Доставка</p>
-                    <p className="p-2">Самовывоз</p>
+                <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px] cursor-pointer">
+                    <p className={deliv ? "bg-black text-white rounded-full p-2" : "p-2 hover:scale-110"} onClick={() => setDeliv(true)}>Доставка</p>
+                    <p className={deliv ? "p-2 hover:scale-110" : "bg-black text-white rounded-full p-2"} onClick={() => setDeliv(false)}>Самовывоз</p>
                 </div>
             </div>
 

@@ -5,6 +5,26 @@ const Food = () => {
 
     const [foods, setFoods] = useState(data)
 
+    // Filter
+
+    const filterType = (category) => {
+        setFoods(
+            data.filter((item) => {
+                return item.category === category;
+            })
+            
+        );
+    };
+
+    const filterPrice = (price) => {
+        setFoods(
+            data.filter((item) => {
+                return item.price === price;
+            })
+        );
+    };
+
+
     return (
         <div className="max-w-[1640px] m-auto px-4 py-12">
             <h1 className="text-orange-600 font-bold text-4xl text-center">Самые популярные блюда</h1>
@@ -16,11 +36,11 @@ const Food = () => {
                 <div>
                     <p className="font-bold text-gray-700">Фильтр по виду блюда</p>
                     <div className="flex  flex-wrap">
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Все</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Бургеры</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Пицца</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Салаты</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Курица</button>
+                        <button onClick={() => setFoods(data)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Все</button>
+                        <button onClick={() => filterType("burger")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Бургеры</button>
+                        <button onClick={() => filterType("pizza")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Пицца</button>
+                        <button onClick={() => filterType("salad")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Салаты</button>
+                        <button onClick={() => filterType("chicken")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Курица</button>
                     </div>
                 </div>
 
@@ -28,10 +48,10 @@ const Food = () => {
                 <div>
                     <p className="font-bold text-gray-700">Фильтр по цене</p>
                     <div className="flex justify-between max-w-[390px] w-full">
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$$</button>
-                        <button className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$$$</button>
+                        <button onClick={() => filterPrice("$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$</button>
+                        <button onClick={() => filterPrice("$$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$</button>
+                        <button onClick={() => filterPrice("$$$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$$</button>
+                        <button onClick={() => filterPrice("$$$$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$$$</button>
                     </div>
                 </div>
             </div>
@@ -40,7 +60,7 @@ const Food = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
                 {foods.map((item, index) => (
-                    <div key={index} className="border shadow-lg rounded-lg hover:scale-105 duration-300">
+                    <div className="border shadow-lg rounded-lg hover:scale-105 duration-300">
                         <img className="w-full h-[200px] object-cover rounded-t-lg"
                          src={item.image} alt={item.name} />
                         <div className="flex justify-between px-2 py-4">
