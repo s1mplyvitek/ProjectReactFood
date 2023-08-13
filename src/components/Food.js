@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { data } from "./data/data";
+import Cards from "./Cards";
 
-const Food = () => {
+const Food = () => {    
 
-    const [foods, setFoods] = useState(data)
+    const [foods, setFoods] = useState(data)  
 
     // Filter
 
@@ -12,7 +13,7 @@ const Food = () => {
             data.filter((item) => {
                 return item.category === category;
             })
-            
+
         );
     };
 
@@ -59,18 +60,8 @@ const Food = () => {
             {/* Display foods */}
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-                {foods.map((item, index) => (
-                    <div className="border shadow-lg rounded-lg hover:scale-105 duration-300">
-                        <img className="w-full h-[200px] object-cover rounded-t-lg"
-                         src={item.image} alt={item.name} />
-                        <div className="flex justify-between px-2 py-4">
-                            <p className="font-bold">{item.name}</p>
-                            <p>
-                                <span className="bg-orange-500 text-white p-1 rounded-full">{item.price}</span>
-                            </p>
-                        </div>
-
-                    </div>
+                {data.map((item) => (
+                    <Cards key={item.id} names={item.name} categories={item.category} images={item.image} prices={item.price} />
                 ))}
             </div>
         </div>
