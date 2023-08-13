@@ -1,7 +1,8 @@
 import Modal from "react-modal"
 import React from "react";
 import {AiOutlineClose} from "react-icons/ai"
-import styles from "./Cards.module.css"
+import './modalStyles.css'
+
 
 const customStyles = {
     content: {
@@ -52,14 +53,15 @@ const Cards = ({ names, categories, images, prices, key }) => {
 
             </div>
             <Modal 
-                
+                className="modal"
+                overlayClassName="overlay"
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
                 style={customStyles }
                 contentLabel="Example Modal">
                 <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-                <img className="w-full h-[200px] object-cover rounded-t-lg"
+                <img className="w-full h-[300px] object-cover rounded-t-lg"
                     src={images} alt={names} />
                 <div className="flex justify-between px-2 py-4">
                     <p className="font-bold">{names}</p>
