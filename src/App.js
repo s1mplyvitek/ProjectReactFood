@@ -5,16 +5,18 @@ import Hero from "./components/Hero";
 import HeadLineCards from "./components/HeadLineCards";
 import Food from "./components/Food";
 import Category from "./components/Category";
+import { Outlet } from "react-router-dom";
 
 
 function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <HeadLineCards />
-      <Food />
+      <Outlet></Outlet>
       <Category />
+      
+      
+      
     </div>
 
 

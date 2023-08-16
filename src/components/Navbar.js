@@ -4,11 +4,22 @@ import { BsFillCartFill, BsFillSaveFill } from 'react-icons/bs';
 import { TbTruckDelivery } from "react-icons/tb";
 import { MdFavorite, MdHelp } from "react-icons/md";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
     const [nav, setNav] = useState(false)
     const [deliv, setDeliv] = useState(true)
+
+    let navigation = [{ title: "О нас", icon: <TbTruckDelivery />, link: "about"},
+                      { title: "Избранное", icon: <MdFavorite />, link: "favor"},
+                      { title: "Кошелек", icon: <FaWallet />, link: "wallet" },
+                      { title: "Помощь", icon: <MdHelp />, link: "help" },
+                      { title: "Акции", icon: <AiFillTag />, link: "fill" },
+                      { title: "Лучшие", icon: <BsFillSaveFill />, link: "fillsave" },
+                      { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "friends" },
+
+    ]
 
 
     return (
@@ -20,9 +31,12 @@ const Navbar = () => {
                 <div onClick={() => setNav(!nav)} className="cursor-pointer">
                     <AiOutlineMenu size={30} />
                 </div>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
-                   <span className="font-bold">еDa</span>livery
-                </h1>
+                <Link to={"/"}>
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
+                        <span className="font-bold">еDa</span>livery
+                    </h1>
+                </Link>
+
                 <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px] cursor-pointer">
                     <p className={deliv ? "bg-black text-white rounded-full p-2" : "p-2 hover:scale-110"} onClick={() => setDeliv(true)}>Доставка</p>
                     <p className={deliv ? "p-2 hover:scale-110" : "bg-black text-white rounded-full p-2"} onClick={() => setDeliv(false)}>Самовывоз</p>
@@ -45,36 +59,34 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {/* Overlay */}
             {nav ? <div className=
-            "bg-black/80 fixed w-full h-screen z-10 top-0 left-0 "></div> : ""}
+                "bg-black/80 fixed w-full h-screen z-10 top-0 left-0 "></div> : ""}
 
-            
+
 
             {/* Side drawer menu */}
 
-            <div className={nav 
-            ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" 
-            : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
-                <AiOutlineClose 
-                onClick={() => setNav(!nav)} size={30} className="absolute right-4 top-4 cursor-pointer" />
+            <div className={nav
+                ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300"
+                : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
+                <AiOutlineClose
+                    onClick={() => setNav(!nav)} size={30} className="absolute right-4 top-4 cursor-pointer" />
                 <h2 className="text-2xl p-4">
                     Лучшая <span className="font-bold">Еда</span>
                 </h2>
+
                 <nav>
                     <ul className="flex flex-col p-4 text-gray-800">
-                        <li className="text-xl py-4 flex"><TbTruckDelivery
-                            size={25} className="mr-4" /> Заказы</li>
-                        <li className="text-xl py-4 flex"><MdFavorite
-                            size={25} className="mr-4" /> Избранное</li>
-                        <li className="text-xl py-4 flex"><FaWallet
-                            size={25} className="mr-4" /> Кошелек</li>
-                        <li className="text-xl py-4 flex"><MdHelp
-                            size={25} className="mr-4" /> Помощь</li>
-                        <li className="text-xl py-4 flex"><AiFillTag
-                            size={25} className="mr-4" /> Акции</li>
-                        <li className="text-xl py-4 flex"><BsFillSaveFill
-                            size={25} className="mr-4" /> Лучшие</li>
-                        <li className="text-xl py-4 flex"><FaUserFriends
-                            size={25} className="mr-4" /> Приглашайте друзей</li>
+
+                        {navigation.map((item) => (
+                            <Link to={item.link}>
+                                <div onClick={() => setNav(!nav)} className="text-xl py-4 flex">
+                                    <div size={25} className="mr-4">{item.icon}</div>
+                                    <p>{item.title}</p>
+                                </div>
+                            </Link>
+                        ))}
+
+
 
                     </ul>
                 </nav>
