@@ -1,34 +1,24 @@
 import React, { useState } from "react";
-import { AiFillTag, AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
-import { BsFillCartFill, BsFillSaveFill } from 'react-icons/bs';
-import { TbTruckDelivery } from "react-icons/tb";
-import { MdFavorite, MdHelp } from "react-icons/md";
-import { FaUserFriends, FaWallet } from "react-icons/fa";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
+import { BsFillCartFill } from 'react-icons/bs';
+
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({navunder}) => {
 
     const [nav, setNav] = useState(false)
     const [deliv, setDeliv] = useState(true)
 
-    let navigation = [{ title: "О нас", icon: <TbTruckDelivery />, link: "about"},
-                      { title: "Избранное", icon: <MdFavorite />, link: "favor"},
-                      { title: "Кошелек", icon: <FaWallet />, link: "wallet" },
-                      { title: "Помощь", icon: <MdHelp />, link: "help" },
-                      { title: "Акции", icon: <AiFillTag />, link: "fill" },
-                      { title: "Лучшие", icon: <BsFillSaveFill />, link: "fillsave" },
-                      { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "friends" },
-
-    ]
 
 
+    
     return (
         <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
 
             {/* Left side */}
 
             <div className="flex items-center">
-                <div onClick={() => setNav(!nav)} className="cursor-pointer">
+                <div onClick={() => setNav(!nav)} className="cursor-pointer min-[450px]:hidden">
                     <AiOutlineMenu size={30} />
                 </div>
                 <Link to={"/"}>
@@ -75,9 +65,9 @@ const Navbar = () => {
                 </h2>
 
                 <nav>
-                    <ul className="flex flex-col p-4 text-gray-800">
+                    <div className="flex flex-col p-4 text-gray-800">
 
-                        {navigation.map((item) => (
+                        {navunder.map((item) => (
                             <Link to={item.link}>
                                 <div onClick={() => setNav(!nav)} className="text-xl py-4 flex">
                                     <div size={25} className="mr-4">{item.icon}</div>
@@ -86,12 +76,11 @@ const Navbar = () => {
                             </Link>
                         ))}
 
-
-
-                    </ul>
+                    </div>
                 </nav>
             </div>
 
+            
         </div>
 
     )

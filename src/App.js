@@ -1,22 +1,18 @@
 
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import HeadLineCards from "./components/HeadLineCards";
-import Food from "./components/Food";
+
 import Category from "./components/Category";
 import { Outlet } from "react-router-dom";
+import Navunder from "./components/Navunder";
 
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <Navunder />
+      {/* <Navbar /> */}
       <Outlet></Outlet>
-      <Category />
-      
-      
-      
+      <Category />      
     </div>
 
 
