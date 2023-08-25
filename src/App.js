@@ -10,9 +10,9 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Navunder />      
-      <Outlet></Outlet>
-      <Category /> 
+      <Navunder />
+      <Category />       
+      <Outlet></Outlet>      
       <Footer />         
     </div>
 

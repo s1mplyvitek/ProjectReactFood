@@ -7,9 +7,9 @@ import Hero from "./Hero";
 const All = () => {
     return (
         <>
-            <Hero />
-            <HeadLineCards />
+            <Hero />            
             <Food />
+            <HeadLineCards />
         </>
     );
 };

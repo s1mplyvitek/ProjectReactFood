@@ -4,6 +4,7 @@ import { MdFavorite, MdHelp } from "react-icons/md";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { AiFillTag } from "react-icons/ai";
 import { BsFillSaveFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Navunder = () => {
 
@@ -18,14 +19,16 @@ const Navunder = () => {
     ]
 
     return (
-        <>
-            <Navbar navunder={navigation}/>
-            <div className="max-[450px]:hidden">
+        <div className="bg-white">            
+            <div className="max-[529.9px]:hidden w-2/3 mx-auto flex flex-wrap justify-end gap-4  pt-2">
                 {navigation.map((item) => (
-                    <p className="">{item.title}</p>
+                    <Link to={item.link}>
+                        <div className="flex gap-1 place-content-center text-sm py-1 hover:text-orange-600"><div className="grid place-content-center">{item.icon}</div>{item.title}</div>
+                    </Link>
                 ))}
             </div>
-        </>
+            <Navbar navunder={navigation} />
+        </div>
 
     );
 };

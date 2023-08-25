@@ -1,19 +1,23 @@
 import React from "react";
 import { categories } from "./data/data";
+import { Link } from "react-router-dom";
 
 
 
 const Category = () => {
     return (
-        <div className="max-w-[1640] px-4 py-12">
-            <h1 className="text-orange-600 font-bold text-4xl text-center">Cамые популярные пункты меню</h1>
+        <div className="w-full  bg-orange-100 grid justify-items-center">
             {/* Categories */}
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-6 py-6">
+            <div className="grid grid-cols-3 py-2 max-[520px]:gap-1 gap-2 sm:w-2/3 sm:flex flex-wrap justify-between">
                 {categories.map((item, index) => (
-                    <div className="bg-gray-100 rounded-lg p-4 flex justify-between items-center">
-                        <h2 className="font-bold sm:text-xl">{item.name}</h2>
-                        <img className="w-20" src={item.image} alt={item.name}/>
-                    </div>
+
+                    <Link to={item.link}>
+                        <div className="flex items-center gap-2">
+                            <img className="w-8" src={item.image} alt={item.name} />
+                            <h2 className="sm:text-lg text-sm hover:text-orange-600">{item.name}</h2>
+                        </div>
+                    </Link>
+
                 ))}
             </div>
         </div>

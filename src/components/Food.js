@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { data } from "./data/data";
+import { categories, data } from "./data/data";
 import Cards from "./Cards";
+import { Link } from "react-router-dom";
 
-const Food = () => {    
+const Food = () => {
 
-    const [foods, setFoods] = useState(data)  
+    const [foods, setFoods] = useState(data)
 
     // Filter
 
@@ -27,8 +28,26 @@ const Food = () => {
 
 
     return (
-        <div className="max-w-[1640px] m-auto px-4 py-12">
-            <h1 className="text-orange-600 font-bold text-4xl text-center">Самые популярные блюда</h1>
+        <div className="px-5 mx-auto py-10 lg:w-3/4">
+
+            <h1 className="text-4xl text-center text-orange-500 font-bold my-5">Наше меню</h1>
+
+            <div className="grid grid-cols-1 min-[530px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 py-5 justify-items-center">
+                {categories.map((item) => (
+
+                    <Link to={item.link}>
+                        <div className="w-full mx-auto hover:scale-105 duration-300">
+                            <img className="h-[200px] object-cover mx-auto" src={item.image2} alt="/"/>
+                            <p className="text-center text-xl font-bold text-gray-500">{item.name}</p>
+
+                        </div>
+                    </Link>
+
+
+                ))}
+            </div>
+
+            <h1 className="text-orange-600 font-bold text-4xl text-center pt-10">Популярные блюда</h1>
 
             {/* Filter Row */}
             <div className="flex flex-col lg:flex-row justify-between">

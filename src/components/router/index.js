@@ -7,6 +7,10 @@ import WallPage from "../pages/WallPage";
 import HelpPage from "../pages/HelpPage";
 import FillPage from "../pages/FillPage";
 import FriendsPage from "../pages/FriendsPage";
+import BurgerPage from "../pages/categoryPages/burgerPage";
+import ChickenPage from "../pages/categoryPages/chickenPage";
+import PizzaPage from "../pages/categoryPages/pizzaPage";
+import FreePage from "../pages/categoryPages/freePage";
 
 
 
@@ -34,7 +38,10 @@ const router = createBrowserRouter([
             {path: "help", element: <HelpPage />},
             {path: "fill", element: <FillPage />},
             {path: "friends", element: <FriendsPage />},
-            
+            {path: "burgerPage", element: <BurgerPage />},
+            {path: "pizzaPage", element: <PizzaPage />},
+            {path: "chickenPage", element: <ChickenPage />},
+            {path: "freePage", element: <FreePage />},
 
         ]
     },

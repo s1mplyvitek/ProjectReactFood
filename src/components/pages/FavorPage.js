@@ -1,6 +1,6 @@
 const FavorPage = () => {
     return(
-        <div>Что то избранное</div>
+        <div className="h-[25rem]">Что то избранное</div>
     );
 };
 

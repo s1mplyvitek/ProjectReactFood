@@ -38,21 +38,21 @@ const Hero = () => {
   };
 
   return (
-    <div className='max-w-[1400px] h-[650px] w-full m-auto py-12 px-4 relative group'>
-      <div className="absolute w-full h-1/2 text-gray-200 flex flex-col justify-center">
-        <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Самая <span className="text-orange-600">Лучшая</span></h1>
-        <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"> <span className="text-orange-600">Еда</span> еDalivery</h1>
+    <div className='h-[650px] w-full m-auto pt-5 relative group'>
+      <div className="absolute w-full h-1/2 text-gray-200 flex flex-col justify-center ml-14 px-24">
+        <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"><span className="text-orange-600">Lorem </span>Dolor</h1>
+        <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Ipsum <span className="text-orange-600"><span className="italic">еDa</span>livery</span></h1>
       </div>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+        className='w-full h-full bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className='hidden group-hover:block absolute ml-24 top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className='hidden group-hover:block absolute mr-24 top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       <div className='flex top-4 justify-center py-2'>

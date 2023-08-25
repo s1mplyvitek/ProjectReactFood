@@ -65,9 +65,7 @@ const Cards = ({ names, categories, images, prices, key }) => {
                     src={images} alt={names} />
                 <div className="flex justify-between px-2 py-4">
                     <p className="font-bold">{names}</p>
-                    <p>
-                        <span className="bg-orange-500 text-white p-1 rounded-full">{prices}</span>
-                    </p>
+                    <button>Выбери меня!</button>
                     <div className="cursor-pointer" onClick={closeModal}><AiOutlineClose /></div>
                 </div>
             </Modal>
