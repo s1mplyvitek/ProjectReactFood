@@ -5,7 +5,7 @@ import footlogo from "../content/footer.png"
 
 const Footer = () => {
     return (
-        <footer className="h-full  bg-slate-100 rounded-t-[36px]">
+        <footer className="h-full  bg-slate-100 rounded-t-[36px] mt-16">
             <div className="flex flex-col items-center min-[1230px]:grid grid-cols-5 gap-5 py-5 w-3/4 mx-auto">
                 <div className="flex flex-col w-40 justify-start">
                     <img className="w-40 mb-3" src={footlogo} alt="не загрузилась" />

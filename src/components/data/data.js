@@ -108,71 +108,151 @@ export const data = [
     price2: "200 ₽"
   },
   {
-    id: 5,
+    id: 13,
     name: 'Feta & Spinnach',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$',
+    price2: "300 ₽"
   },
   {
-    id: 6,
+    id: 14,
     name: 'Supreme Pizza',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$',
+    price2: "300 ₽"
   },
   {
-    id: 7,
+    id: 15,
     name: 'Meat Lovers',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
     price: '$$$$',
+    price2: "300 ₽"
   },
   {
-    id: 8,
+    id: 16,
     name: 'Cheese Pizza',
     category: 'pizza',
     image:
       'https://images.unsplash.com/photo-1548369937-47519962c11a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlZXNlJTIwcGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$',
+    price2: "300 ₽"
   },
   {
-    id: 9,
+    id: 17,
+    name: 'Feta & Spinnach',
+    category: 'pizza',
+    image:
+      'https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 18,
+    name: 'Supreme Pizza',
+    category: 'pizza',
+    image:
+      'https://images.unsplash.com/photo-1604382355076-af4b0eb60143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 19,
+    name: 'Meat Lovers',
+    category: 'pizza',
+    image:
+      'https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    price: '$$$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 20,
+    name: 'Cheese Pizza',
+    category: 'pizza',
+    image:
+      'https://images.unsplash.com/photo-1548369937-47519962c11a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2hlZXNlJTIwcGl6emF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$',
+    price2: "300 ₽"
+  },
+  {
+    id: 21,
     name: 'Kale Salad',
     category: 'salad',
     image:
       'https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$',
+    price2: "300 ₽"
   },
   {
-    id: 10,
+    id: 22,
     name: 'Ceasar Salad',
     category: 'salad',
     image:
       'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$',
+    price2: "300 ₽"
   },
   {
-    id: 11,
+    id: 23,
     name: 'Loaded Salad',
     category: 'salad',
     image:
       'https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
     price: '$$$$',
+    price2: "300 ₽"
   },
   {
-    id: 12,
+    id: 24,
     name: 'Fruit Salad',
     category: 'salad',
     image:
       'https://images.unsplash.com/photo-1564093497595-593b96d80180?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
     price: '$',
+    price2: "300 ₽"
   },
   {
-    id: 13,
+    id: 25,
+    name: 'Kale Salad',
+    category: 'salad',
+    image:
+      'https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 26,
+    name: 'Ceasar Salad',
+    category: 'salad',
+    image:
+      'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c2FsYWQlMjBjZWFzYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 27,
+    name: 'Loaded Salad',
+    category: 'salad',
+    image:
+      'https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 28,
+    name: 'Fruit Salad',
+    category: 'salad',
+    image:
+      'https://images.unsplash.com/photo-1564093497595-593b96d80180?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZnJ1aXQlMjBzYWxhZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60',
+    price: '$',
+    price2: "300 ₽"
+  },
+  {
+    id: 29,
     name: 'Wings',
     category: 'chicken',
     image:
@@ -181,7 +261,7 @@ export const data = [
     price2: "300 ₽"
   },
   {
-    id: 14,
+    id: 30,
     name: 'Baked Chicken',
     category: 'chicken',
     image:
@@ -190,7 +270,7 @@ export const data = [
     price2: "300 ₽"
   },
   {
-    id: 15,
+    id: 31,
     name: 'Chicken Tenders',
     category: 'chicken',
     image:
@@ -199,7 +279,7 @@ export const data = [
     price2: "300 ₽"
   },
   {
-    id: 16,
+    id: 32,
     name: 'Chicken Kabob',
     category: 'chicken',
     image:
@@ -208,15 +288,56 @@ export const data = [
     price2: "300 ₽"
   },
   {
-    id: 17,
+    id: 33,
+    name: 'Wings',
+    category: 'chicken',
+    image:
+      'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 34,
+    name: 'Baked Chicken',
+    category: 'chicken',
+    image:
+      'https://images.unsplash.com/photo-1594221708779-94832f4320d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y2hpY2tlbiUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60',
+    price: '$$$$',
+    price2: "300 ₽"
+  },
+  {
+    id: 35,
+    name: 'Chicken Tenders',
+    category: 'chicken',
+    image:
+      'https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    price: '$',
+    price2: "300 ₽"
+  },
+  {
+    id: 36,
     name: 'Chicken Kabob',
-    category: 'free',
+    category: 'chicken',
     image:
       'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNoaWNrZW4lMjBmb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
     price: '$$$',
     price2: "300 ₽"
   },
+  {
+    id: 37,
+    name: 'Картошка фри',
+    category: 'free',
+    image: "https://img.freepik.com/free-photo/top-view-delicious-fries-and-sauce_23-2149235944.jpg?w=740&t=st=1693020795~exp=1693021395~hmac=1d25a3f60addd30a4dcbc408713da7d3d2ad9a5a19fa629f41086669b7701e2e",
+    price: '$$$',
+    price2: "300 ₽"
+  },
 ];
+
+
+
+
+
+
 
 export const categories = [
   {
@@ -250,6 +371,7 @@ export const categories = [
   {
     id: 5,
     name: 'Салат',
+    link: "saladPage",
     image: 'https://cdn-icons-png.flaticon.com/128/5990/5990466.png',
     image2: "https://img.freepik.com/premium-photo/a-white-plate-with-salad-and-floating-in-the-air-ingredients-olives-lettuce-onion-tomato-mozzarella-cheese-parsley-basil-and-olive-oil-vegetarian-menu-copy-space_120795-596.jpg?w=900"
   },
@@ -270,5 +392,5 @@ export const categories = [
     name: 'Комбо',
     image: 'https://cdn-icons-png.flaticon.com/128/5099/5099426.png',
     image2: "https://img.freepik.com/free-photo/fast-food-on-the-table_144627-16482.jpg?w=1380&t=st=1692940480~exp=1692941080~hmac=bc8b78ffc273b9d3793de9ce706def2de3e3927787208c50af4bbf3225f82ba3"
-  },  
+  },
 ];

@@ -11,6 +11,9 @@ import BurgerPage from "../pages/categoryPages/burgerPage";
 import ChickenPage from "../pages/categoryPages/chickenPage";
 import PizzaPage from "../pages/categoryPages/pizzaPage";
 import FreePage from "../pages/categoryPages/freePage";
+import SaladPage from "../pages/categoryPages/saladPage";
+import IdPage from "../idPage";
+import CartPage from "../pages/CartPage";
 
 
 
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
         children: [
+            {path: "/catalog/:id", element: <IdPage />},
             { path: "/", element: <All /> },
             {
                 path: "about", element: <Outlet />,
@@ -32,7 +36,8 @@ const router = createBrowserRouter([
                         )
                     }
                 ]
-            },
+            }, 
+            {path: "cartPage", element: <CartPage />},           
             {path: "favor", element: <FavorPage />},
             {path: "wallet", element: <WallPage />},
             {path: "help", element: <HelpPage />},
@@ -42,6 +47,7 @@ const router = createBrowserRouter([
             {path: "pizzaPage", element: <PizzaPage />},
             {path: "chickenPage", element: <ChickenPage />},
             {path: "freePage", element: <FreePage />},
+            {path: "saladPage", element: <SaladPage />},
 
         ]
     },

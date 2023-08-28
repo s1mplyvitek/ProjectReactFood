@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { data } from "../../data/data";
 
-const PizzaPage = () => {
+const SaladPage = () => {
     return (
         <>
-            <h2 className="text-center font-bold text-3xl text-orange-500 p-5">Пицца</h2>
+            <h2 className="text-center font-bold text-3xl text-orange-500 p-5">Салат</h2>
             <div className="grid grid-cols-4 gap-5 py-5 w-2/3 mx-auto">
-                {data.map((item) => (item.category === "pizza" ?
+                {data.map((item) => (item.category === "salad" ?
                     (
                         <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">
                             <Link to={`/catalog/${item.id}`}>
@@ -28,7 +28,6 @@ const PizzaPage = () => {
                                 </button>
                             </div>
                         </div>
-
                     ) : ""
                 ))}
             </div>
@@ -37,4 +36,4 @@ const PizzaPage = () => {
     );
 };
 
-export default PizzaPage;
+export default SaladPage;

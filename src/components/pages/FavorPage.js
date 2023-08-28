@@ -1,6 +1,8 @@
 const FavorPage = () => {
-    return(
-        <div className="h-[25rem]">Что то избранное</div>
+    return (
+        <div className="w-2/3 mx-auto">
+            Что то избранное
+        </div>
     );
 };
 

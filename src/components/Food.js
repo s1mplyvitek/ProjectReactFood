@@ -25,7 +25,11 @@ const Food = () => {
             })
         );
     };
-
+    let categoryArr = ['burger', 'pizza', 'salad', 'free', 'chicken'];
+    const popCards = categoryArr.reduce((acc, category) => {
+        const items = data.filter(item => item.category === category);
+        return acc.concat(items.slice(0, 4));
+      }, []);
 
     return (
         <div className="px-5 mx-auto py-10 lg:w-3/4">
@@ -79,8 +83,8 @@ const Food = () => {
             {/* Display foods */}
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-                {data.map((item) => (
-                    <Cards key={item.id} names={item.name} categories={item.category} images={item.image} prices={item.price} />
+                {popCards.map((item) => (
+                    <Cards key={item.id} names={item.name} categories={item.category} images={item.image} prices={item.price}/>
                 ))}
             </div>
         </div>

@@ -1,7 +1,9 @@
 import Modal from "react-modal"
 import React from "react";
-import {AiOutlineClose} from "react-icons/ai"
+import { AiOutlineClose } from "react-icons/ai"
 import './modalStyles.css'
+import { Link } from "react-router-dom";
+
 
 
 const customStyles = {
@@ -12,8 +14,8 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        
-        
+
+
     },
 };
 
@@ -36,7 +38,7 @@ const Cards = ({ names, categories, images, prices, key }) => {
         setIsOpen(false);
     }
 
-
+    
 
     return (
         <>
@@ -52,20 +54,22 @@ const Cards = ({ names, categories, images, prices, key }) => {
 
 
             </div>
-            <Modal 
+            <Modal
                 className="modal"
                 overlayClassName="overlay"
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
                 onRequestClose={closeModal}
-                style={customStyles }
+                style={customStyles}
                 contentLabel="Example Modal">
                 <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
                 <img className="w-full h-[300px] object-cover rounded-t-lg"
                     src={images} alt={names} />
                 <div className="flex justify-between px-2 py-4">
                     <p className="font-bold">{names}</p>
-                    <button>Выбери меня!</button>
+                    <Link to={`/catalog/${key}`}>
+                        <button>Выбери меня!</button>                        
+                    </Link>
                     <div className="cursor-pointer" onClick={closeModal}><AiOutlineClose /></div>
                 </div>
             </Modal>

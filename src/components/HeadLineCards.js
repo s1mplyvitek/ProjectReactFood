@@ -3,7 +3,7 @@ import React from "react";
 
 const HeadLineCards = () => {
     return (
-        <div className="max-w-[1640px] mx-auto p-4 py-12 grid md:grid-cols-3 gap-6">
+        <div className="w-3/4 mx-auto px-5 py-12 grid md:grid-cols-3 gap-5">
             {/* Card */}
             <div className="rounded-xl relative">
                 {/* Overlay */}

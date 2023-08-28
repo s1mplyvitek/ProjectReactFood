@@ -46,9 +46,12 @@ const Navbar = ({ navunder }) => {
 
                     {/* Cart button */}
 
-                    <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">
-                        <BsFillCartFill size={20} className="" /> Корзина
-                    </button>
+                    <Link to={"cartPage"}>
+                        <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">
+                            <BsFillCartFill size={20} className="" /> Корзина
+                        </button>
+                    </Link>
+
 
                     {/* Mobile Menu */}
                     {/* Overlay */}
