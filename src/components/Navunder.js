@@ -5,6 +5,7 @@ import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { AiFillTag } from "react-icons/ai";
 import { BsFillSaveFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import CartProvider from "./providers/CartProvider";
 
 const Navunder = () => {
 
@@ -19,7 +20,7 @@ const Navunder = () => {
     ]
 
     return (
-        <div className="bg-white">            
+        <div className="bg-white">
             <div className="max-[529.9px]:hidden w-2/3 mx-auto flex flex-wrap justify-end gap-4  pt-2">
                 {navigation.map((item) => (
                     <Link to={item.link}>
@@ -27,7 +28,10 @@ const Navunder = () => {
                     </Link>
                 ))}
             </div>
-            <Navbar navunder={navigation} />
+            <CartProvider>
+                <Navbar navunder={navigation} />
+            </CartProvider>
+
         </div>
 
     );

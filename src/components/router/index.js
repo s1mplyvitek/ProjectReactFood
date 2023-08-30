@@ -13,7 +13,7 @@ import PizzaPage from "../pages/categoryPages/pizzaPage";
 import FreePage from "../pages/categoryPages/freePage";
 import SaladPage from "../pages/categoryPages/saladPage";
 import IdPage from "../idPage";
-import CartPage from "../pages/CartPage";
+
 
 
 
@@ -36,8 +36,7 @@ const router = createBrowserRouter([
                         )
                     }
                 ]
-            }, 
-            {path: "cartPage", element: <CartPage />},           
+            },                      
             {path: "favor", element: <FavorPage />},
             {path: "wallet", element: <WallPage />},
             {path: "help", element: <HelpPage />},

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
-import { BsFillCartFill } from 'react-icons/bs';
 import navlogo from "../content/footer.png"
-
 import { Link } from "react-router-dom";
+import { BsFillCartFill } from "react-icons/bs";
 
-const Navbar = ({ navunder }) => {
+
+const Navbar = ({ navunder, cart, sum, nameCart, }) => {
 
     const [nav, setNav] = useState(false)
     const [deliv, setDeliv] = useState(true)
+    const [cartSide, setCartSide] = useState(false)
 
 
 
@@ -46,25 +47,61 @@ const Navbar = ({ navunder }) => {
 
                     {/* Cart button */}
 
-                    <Link to={"cartPage"}>
+                    <div onClick={() => setCartSide(!cartSide)} className="flex gap-5">
                         <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">
                             <BsFillCartFill size={20} className="" /> Корзина
                         </button>
-                    </Link>
+                        <span>{cart.length}</span>
+                        <span>{sum} rub</span>
+                    </div>
+
+                    {/* Cart Sidebar */}
+                    {/*Overlay*/}
+                    {cartSide ? <div className=
+                        "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 "></div> : ""}
+                    {/* Side */}
+
+                    <div className={cartSide
+                        ? "fixed top-0 right-0 w-[400px] h-screen bg-white z-20 duration-300"
+                        : "fixed top-0 right-[-100%] w-[400px] h-screen bg-white z-20 duration-300"}>
+                        <div className="">
+                            <AiOutlineClose
+                                onClick={() => setCartSide(!cartSide)} size={30} className="absolute left-4 top-4 cursor-pointer" />
+                            <div className="flex justify-end">
+                                <h2 className="text-2xl p-4">
+                                    <span className="font-bold">eDa</span>livery
+                                </h2>
+
+                            </div>
+                            <div className="text-center text-2xl grid">
+                                <span className="">Корзина</span>
+                                <div className="text-start text-lg grid p-5">
+                                    <span className="">кол-во: {cart.length} товаров</span>
+                                    <span>сумма: {sum} ₽</span>
+                                    <p>{nameCart}</p>                                     
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
 
 
                     {/* Mobile Menu */}
                     {/* Overlay */}
                     {nav ? <div className=
-                        "bg-black/80 fixed w-full h-screen z-10 top-0 left-0 "></div> : ""}
+                        "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 "></div> : ""}
 
 
 
                     {/* Side drawer menu */}
 
                     <div className={nav
-                        ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300"
-                        : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"}>
+                        ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-20 duration-300"
+                        : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-20 duration-300"}>
                         <AiOutlineClose
                             onClick={() => setNav(!nav)} size={30} className="absolute right-4 top-4 cursor-pointer" />
                         <h2 className="text-2xl p-4">
