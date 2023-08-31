@@ -1,21 +1,21 @@
 
 import React from "react";
-import Category from "./components/Category";
 import { Outlet } from "react-router-dom";
-import Navunder from "./components/Navunder";
 import Footer from "./components/Footer";
+import CartProvider from "./components/providers/CartProvider";
+import Navbar from "./components/Navbar";
 
 
 
 function App() {
   return (
     <div>
-      <Navunder />
-      <Category />       
-      <Outlet></Outlet>      
-      <Footer />         
+      <CartProvider>
+        <Navbar />
+      </CartProvider>      
+      <Outlet></Outlet>
+      <Footer />
     </div>
-
 
   );
 }
