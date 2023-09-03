@@ -1,14 +1,14 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import All from "../components/All";
-import AboutPage from "../components/pages/AboutPage";
-import FavorPage from "../components/pages/FavorPage";
-import WallPage from "../components/pages/WallPage";
-import HelpPage from "../components/pages/HelpPage";
-import FillPage from "../components/pages/FillPage";
-import FriendsPage from "../components/pages/FriendsPage";
-import IdPage from "../components/idPage";
-import MenuCategoriesCards from "../components/pages/MenuCategoriesCardsPage.js";
+import App from "../../App";
+import All from "../All";
+import AboutPage from "../pages/AboutPage";
+import FavorPage from "../pages/FavorPage";
+import WallPage from "../pages/WallPage";
+import HelpPage from "../pages/HelpPage";
+import FillPage from "../pages/FillPage";
+import FriendsPage from "../pages/FriendsPage";
+import IdPage from "../idPage";
+import MenuCategoriesCards from "../pages/MenuCategoriesCardsPage.js";
 
 
 
