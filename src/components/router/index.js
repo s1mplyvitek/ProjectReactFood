@@ -7,12 +7,8 @@ import WallPage from "../pages/WallPage";
 import HelpPage from "../pages/HelpPage";
 import FillPage from "../pages/FillPage";
 import FriendsPage from "../pages/FriendsPage";
-import BurgerPage from "../pages/categoryPages/burgerPage";
-import ChickenPage from "../pages/categoryPages/chickenPage";
-import PizzaPage from "../pages/categoryPages/pizzaPage";
-import FreePage from "../pages/categoryPages/freePage";
-import SaladPage from "../pages/categoryPages/saladPage";
 import IdPage from "../idPage";
+import MenuCategoriesCards from "../pages/MenuCategoriesCardsPage.js";
 
 
 
@@ -22,6 +18,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
         children: [
+            {path: "/category/:slug", element: <MenuCategoriesCards />},
             {path: "/catalog/:id", element: <IdPage />},
             { path: "/", element: <All /> },
             {
@@ -42,11 +39,6 @@ const router = createBrowserRouter([
             {path: "help", element: <HelpPage />},
             {path: "fill", element: <FillPage />},
             {path: "friends", element: <FriendsPage />},
-            {path: "burgerPage", element: <BurgerPage />},
-            {path: "pizzaPage", element: <PizzaPage />},
-            {path: "chickenPage", element: <ChickenPage />},
-            {path: "freePage", element: <FreePage />},
-            {path: "saladPage", element: <SaladPage />},
 
         ]
     },

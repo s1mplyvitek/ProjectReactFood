@@ -4,9 +4,11 @@ import dataReducer from "./slices/dataSlice";
 
 
 
+
 export const store = configureStore({
     reducer: {
         cart: cartReducer,
         data: dataReducer,
+        
     },
 });
