@@ -331,6 +331,135 @@ export const data = [
     price: '$$$',
     price2: 300
   },
+  {
+    id: 38,
+    name: 'Мохито',
+    category: 'beverages',
+    image: "https://img.freepik.com/free-photo/top-view-delicious-fries-and-sauce_23-2149235944.jpg?w=740&t=st=1693020795~exp=1693021395~hmac=1d25a3f60addd30a4dcbc408713da7d3d2ad9a5a19fa629f41086669b7701e2e",
+    price: '$$$',
+    price2: 300
+  },
+  {
+    id: 39,
+    name: 'Капуччино',
+    category: 'beverages',
+    image: "https://img.freepik.com/free-photo/top-view-delicious-fries-and-sauce_23-2149235944.jpg?w=740&t=st=1693020795~exp=1693021395~hmac=1d25a3f60addd30a4dcbc408713da7d3d2ad9a5a19fa629f41086669b7701e2e",
+    price: '$$$',
+    price2: 300
+  },
+  {
+    id: 40,
+    name: 'Смузи',
+    category: 'beverages',
+    image: "https://img.freepik.com/free-photo/top-view-delicious-fries-and-sauce_23-2149235944.jpg?w=740&t=st=1693020795~exp=1693021395~hmac=1d25a3f60addd30a4dcbc408713da7d3d2ad9a5a19fa629f41086669b7701e2e",
+    price: '$$$',
+    price2: 300
+  },
+  {
+    id: 41,
+    name: 'Глоток неба',
+    category: 'beverages',
+    image: "https://img.freepik.com/free-photo/top-view-delicious-fries-and-sauce_23-2149235944.jpg?w=740&t=st=1693020795~exp=1693021395~hmac=1d25a3f60addd30a4dcbc408713da7d3d2ad9a5a19fa629f41086669b7701e2e",
+    price: '$$$',
+    price2: 300
+  },
+  {
+    id: 42,
+    name: "Cheesecake",
+    category: "dessert",
+    image: "cheesecake.jpg",
+    price: 10,
+    price2: 15
+  },
+  {
+    id: 43,
+    name: "Chocolate Brownie",
+    category: "dessert",
+    image: "brownie.jpg",
+    price: 8,
+    price2: 12
+  },
+  {
+    id: 44,
+    name: "Strawberry Shortcake",
+    category: "dessert",
+    image: "strawberry_shortcake.jpg",
+    price: 12,
+    price2: 18
+  },
+  {
+    id: 45,
+    name: "Tiramisu",
+    category: "dessert",
+    image: "tiramisu.jpg",
+    price: 14,
+    price2: 20
+  },
+  {
+    id: 46,
+    name: "Apple Pie",
+    category: "dessert",
+    image: "apple_pie.jpg",
+    price: 9,
+    price2: 13
+  },
+  {
+    id: 47,
+    name: "Ice Cream Sundae",
+    category: "dessert",
+    image: "ice_cream_sundae.jpg",
+    price: 7,
+    price2: 10
+  },
+  {
+    id: 48,
+    name: "Banana Split",
+    category: "dessert",
+    image: "banana_split.jpg",
+    price: 11,
+    price2: 16
+  },
+  {
+    id: 49,
+    name: "Red Velvet Cake",
+    category: "dessert",
+    image: "red_velvet_cake.jpg",
+    price: 13,
+    price2: 19
+  },
+  {
+    id: 50,
+    name: "Cheeseburger Combo",
+    category: "combo",
+    image: "cheeseburger_combo.jpg",
+    price: 8,
+    price2: 12
+  },
+  {
+    id: 51,
+    name: "Chicken Nuggets Combo",
+    category: "combo",
+    image: "chicken_nuggets_combo.jpg",
+    price: 7,
+    price2: 10
+  },
+  {
+    id: 52,
+    name: "Pizza Combo",
+    category: "combo",
+    image: "pizza_combo.jpg",
+    price: 10,
+    price2: 15
+  },
+  {
+    id: 53,
+    name: "Fish and Chips Combo",
+    category: "combo",
+    image: "fish_and_chips_combo.jpg",
+    price: 11,
+    price2: 16
+  }
+
 ];
 
 
@@ -382,6 +511,7 @@ export const categories = [
 
   {
     id: 6,
+    slug: "beverages",
     name: 'Напитки',
     image: 'https://cdn-icons-png.flaticon.com/128/3480/3480648.png',
     image2: "https://img.freepik.com/free-photo/fresh-ice-tea-in-plastic-glass_144627-27132.jpg?w=740&t=st=1692940152~exp=1692940752~hmac=7c6c480e89a93df245060cf3c594c332c94d4e3eb4349e89f86f8714a9be5e28"
@@ -389,6 +519,7 @@ export const categories = [
 
   {
     id: 7,
+    slug: "dessert",
     name: 'Десерт',
     image: 'https://cdn-icons-png.flaticon.com/128/3480/3480774.png',
     image2: "https://img.freepik.com/premium-photo/chocolate-muffin_878798-785.jpg?w=1380"
@@ -396,6 +527,7 @@ export const categories = [
 
   {
     id: 8,
+    slug: "combo",
     name: 'Комбо',
     image: 'https://cdn-icons-png.flaticon.com/128/5099/5099426.png',
     image2: "https://img.freepik.com/free-photo/fast-food-on-the-table_144627-16482.jpg?w=1380&t=st=1692940480~exp=1692941080~hmac=bc8b78ffc273b9d3793de9ce706def2de3e3927787208c50af4bbf3225f82ba3"
