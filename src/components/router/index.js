@@ -9,6 +9,7 @@ import FillPage from "../pages/FillPage";
 import FriendsPage from "../pages/FriendsPage";
 import IdPage from "../idPage";
 import MenuCategoriesCards from "../pages/MenuCategoriesCardsPage.js";
+import BestPage from "../pages/BestPage";
 
 
 
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
             {path: "help", element: <HelpPage />},
             {path: "fill", element: <FillPage />},
             {path: "friends", element: <FriendsPage />},
+            {path: "best", element: <BestPage />},
 
         ]
     },
