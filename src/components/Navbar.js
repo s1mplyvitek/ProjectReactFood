@@ -8,9 +8,25 @@ import { MdFavorite, MdHelp } from "react-icons/md";
 import { FaUserFriends, FaWallet } from "react-icons/fa";
 import { BsFillSaveFill } from "react-icons/bs";
 import Category from "./Category";
+import { useDispatch } from "react-redux";
+import { clearCart } from "../store/slices/cartSlice";
 
 
 const Navbar = ({ cart, sum, nameCart, }) => {
+
+    let dispatch = useDispatch();
+
+    window.addEventListener('scroll', function () {
+        let cartScroll = document.getElementById('scrollFixed');
+
+        if (window.pageYOffset > 70) {
+            cartScroll.style.position = 'fixed';
+            cartScroll.style.top = '1px';
+            cartScroll.style.right = '283px';
+        } else {
+            cartScroll.style.position = 'static';
+        }
+    });
 
     const [nav, setNav] = useState(false)
     const [deliv, setDeliv] = useState(true)
@@ -23,7 +39,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
         { title: "Кошелек", icon: <FaWallet />, link: "wallet" },
         { title: "Помощь", icon: <MdHelp />, link: "help" },
         { title: "Акции", icon: <AiFillTag />, link: "fill" },
-        { title: "Лучшие", icon: <BsFillSaveFill />, link: "fillsave" },
+        { title: "Bests", icon: <BsFillSaveFill />, link: "best" },
         { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "friends" },
     ];
 
@@ -73,12 +89,12 @@ const Navbar = ({ cart, sum, nameCart, }) => {
 
                         {/* Cart button */}
 
-                        <div onClick={() => setCartSide(!cartSide)} className="flex gap-5">
+                        <div id="scrollFixed" onClick={() => setCartSide(!cartSide)} className="flex z-20 gap-5">
+                            <span>{cart.length}</span>
+                            <span>{sum} rub</span>
                             <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">
                                 <BsFillCartFill size={20} className="" /> Корзина
                             </button>
-                            <span>{cart.length}</span>
-                            <span>{sum} rub</span>
                         </div>
 
                         {/* Cart Sidebar */}
@@ -102,9 +118,14 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                                 <div className="text-center text-2xl grid">
                                     <span className="">Корзина</span>
                                     <div className="text-start text-lg grid p-5">
-                                        <span className="">кол-во: {cart.length} товаров</span>
-                                        <span>сумма: {sum} ₽</span>
-                                        <p>{nameCart}</p>
+                                        <p className="mb-14">{nameCart}</p>
+                                        <div className="flex gap-3 pb-3">
+                                            <span className="text-2xl text-bold">сумма: {sum} ₽</span>
+                                            <span className="">Выбрано товаров: {cart.length}</span>
+                                        </div>
+                                        <button onClick={() => dispatch(clearCart())} class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                                            Очистить корзину
+                                        </button>
                                     </div>
 
                                 </div>
