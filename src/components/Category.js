@@ -23,7 +23,7 @@ const Category = () => {
     return (
         <div className="w-full  bg-orange-200 grid justify-items-center sticky top-0 z-10">
 
-            <div className="grid grid-cols-3 py-2 max-[520px]:gap-1 gap-8 sm:w-2/3 sm:flex flex-start">
+            <div className="flex flex-wrap py-2 max-[520px]:gap-1 gap-6 w-2/3 ">
                 <>
                     {categories.map((item, index) => (
 
