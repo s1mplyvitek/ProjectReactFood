@@ -34,7 +34,7 @@ const Category = () => {
                                     <h2 className="sm:text-lg text-sm hover:text-orange-600">{item.name}</h2>
                                 </div>}
                             {showButton && <div className="">                                
-                                <h2 className="sm:text-lg text-sm hover:text-orange-600">{item.name}</h2>
+                                <h2 className="text-sm sm:text-base   hover:text-orange-600">{item.name}</h2>
                             </div>}
 
                         </Link>
