@@ -90,8 +90,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                         {/* Cart button */}
 
                         <div id="scrollFixed" onClick={() => setCartSide(!cartSide)} className="flex z-20 gap-5">
-                            <span>{cart.length}</span>
-                            <span>{sum} rub</span>
+                            <span className="text-xs fixed bg-black rounded-lg right-[390px] text-white p-1">{sum} ₽</span>
                             <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">
                                 <BsFillCartFill size={20} className="" /> Корзина
                             </button>
