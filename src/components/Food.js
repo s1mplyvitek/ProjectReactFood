@@ -84,7 +84,7 @@ const Food = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
                 {popCards.map((item) => (
-                    <Cards key={item.id} names={item.name} categories={item.category} images={item.image} prices={item.price}/>
+                    <Cards key={item.id} id={item.id} names={item.name} categories={item.category} images={item.image} prices={item.price}/>
                 ))}
             </div>
         </div>

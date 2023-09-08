@@ -21,7 +21,7 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-const Cards = ({ names, categories, images, prices, key }) => {
+const Cards = ({ names, categories, images, prices, key, id }) => {
     let subtitle;
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -67,7 +67,7 @@ const Cards = ({ names, categories, images, prices, key }) => {
                     src={images} alt={names} />
                 <div className="flex justify-between px-2 py-4">
                     <p className="font-bold">{names}</p>
-                    <Link to={`/catalog/${key}`}>
+                    <Link to={`/catalog/${id}`}>
                         <button>Выбери меня!</button>                        
                     </Link>
                     <div className="cursor-pointer" onClick={closeModal}><AiOutlineClose /></div>
