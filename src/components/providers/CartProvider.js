@@ -5,8 +5,8 @@ const CartProvider = ({ children }) => {
     const cart = useSelector((state) => state.cart);
     const nameCart = cart.map((item) => (
         <div>
-            <p>
-                <span>{item.food.name}</span> - {item.qty} шт. {item.food.price2 * item.qty} ₽
+            <p className="flex gap-1">
+                <img className="w-7 h-10 object-cover rounded-sm mb-2" src={item.food.image} alt="/"/><span>{item.food.name}</span> - {item.qty} шт. {item.food.price2 * item.qty} ₽
             </p>
         </div>
     ))
