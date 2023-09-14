@@ -21,7 +21,7 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-const Cards = ({ names, categories, images, prices, key, id }) => {
+const Cards = ({ names, categories, images, prices, key, id,}) => {
     let subtitle;
     const [modalIsOpen, setIsOpen] = React.useState(false);
 

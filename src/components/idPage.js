@@ -17,7 +17,7 @@ const IdPage = () => {
                     <p className="text-gray-500">{elementId.name} - lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam cumque nihil a deleniti,
                         voluptatem dolores nesciunt, delectus saepe enim labore</p>
                 </div>
-                <span>{elementId.price2}</span>                
+                <span>{elementId.price2} ₽</span>                
                 <button
                     onClick={() => dispatch(addToCart(elementId))}
                     type="button"

@@ -62,7 +62,7 @@ const Hero = () => {
             onClick={() => goToSlide(slideIndex)}
             className='text-2xl cursor-pointer'
           >
-            <RxDotFilled />
+            <RxDotFilled color={slideIndex == currentIndex ? "orange" : "gray"} />
           </div>
         ))}
       </div>

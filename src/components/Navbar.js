@@ -19,10 +19,10 @@ const Navbar = ({ cart, sum, nameCart, }) => {
     window.addEventListener('scroll', function () {
         let cartScroll = document.getElementById('scrollFixed');
 
-        if (window.pageYOffset > 70) {
+        if (window.pageYOffset > 40) {
             cartScroll.style.position = 'fixed';
-            cartScroll.style.top = '1px';
-            cartScroll.style.right = '283px';
+            cartScroll.style.top = '0.1%';
+            cartScroll.style.right = '16.6%';
         } else {
             cartScroll.style.position = 'static';
         }
@@ -101,7 +101,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                         {/* Cart Sidebar */}
                         {/*Overlay*/}
                         {cartSide ? <div className=
-                            "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 "></div> : ""}
+                            "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 " onClick={() => setCartSide(!cartSide)}></div> : ""}
                         {/* Side */}
 
                         <div className={cartSide
@@ -141,7 +141,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                         {/* Mobile Menu */}
                         {/* Overlay */}
                         {nav ? <div className=
-                            "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 "></div> : ""}
+                            "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 " onClick={() => setNav(!nav)}></div> : ""}
 
 
 
