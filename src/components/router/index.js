@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                     { path: "", element: <AboutPage /> },
                     {
                         path: "contacts", element: (
-                            <div>
+                            <div className="w-2/3 mx-auto grow">
                                 <a href="tel:+79241234567">89241234567</a>
                             </div>
                         )

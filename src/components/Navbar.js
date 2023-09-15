@@ -31,6 +31,8 @@ const Navbar = ({ cart, sum, nameCart, }) => {
     const [nav, setNav] = useState(false)
     const [deliv, setDeliv] = useState(true)
     const [cartSide, setCartSide] = useState(false)
+    const [closeDeliv, setCloseDelive] = useState(false);
+
 
 
     let navigation = [
@@ -74,9 +76,23 @@ const Navbar = ({ cart, sum, nameCart, }) => {
 
                     <div className="flex justify-end gap-5 py-1.5">
 
-                        <div className="hidden min-[1330px]:flex items-center bg-white rounded-full p-1 text-[12px] cursor-pointer">
-                            <p className={deliv ? "bg-black text-white rounded-full p-1.5" : "p-1.5 hover:scale-110"} onClick={() => setDeliv(true)}>Доставка</p>
-                            <p className={deliv ? "p-1.5 hover:scale-110" : "bg-black text-white rounded-full p-1.5"} onClick={() => setDeliv(false)}>Самовывоз</p>
+                        <div className="hidden min-[1330px]:flex items-center bg-white rounded-full p-1 text-[12px] cursor-pointer relative">
+                            <div className="flex" onClick={() => setCloseDelive(false)}>
+                                <p className={deliv ? "bg-black text-white rounded-full p-1.5" : "p-1.5 hover:scale-110"} onClick={() => setDeliv(true)}>Доставка</p>
+                                <p className={deliv ? "p-1.5 hover:scale-110" : "bg-black text-white rounded-full p-1.5"} onClick={() => setDeliv(false)}>Самовывоз</p>
+                            </div>
+
+                            <div className={closeDeliv ? "hidden" : "flex"}>
+                                <div className={deliv ? "absolute flex justify-between top-9 right-16 w-48 h-20 bg-white border shadow-lg rounded-lg  z-20" : "hidden"}>
+                                    Доставка
+                                    <span onClick={() => setCloseDelive(true)}>x</span>
+                                </div>
+                                <div className={deliv ? "hidden" : "absolute  top-9 left-16 w-48 h-20 bg-white border shadow-lg rounded-lg  z-20"}>
+                                    Самовывоз
+                                    <span onClick={() => setCloseDelive(true)}>x</span>
+                                </div>
+                            </div>
+
                         </div>
 
 
