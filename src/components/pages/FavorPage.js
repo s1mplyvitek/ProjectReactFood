@@ -9,7 +9,7 @@ const FavorPage = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className="w-2/3 mx-auto py-5 grid"  >
+        <div className="w-2/3 mx-auto py-5 grid grow"  >
             <span className="text-center mb-5 text-orange-600 text-3xl font-bold">Любимые блюда</span>
             <div className="grid grid-cols-4 gap-3">
                 {favor.map((item) =>
