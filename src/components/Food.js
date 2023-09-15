@@ -9,7 +9,7 @@ const Food = () => {
     let categoryArr = ['burger', 'pizza', 'salad', 'free', 'chicken', "beverages", "dessert", "combo"];
     const popMenu = categoryArr.reduce((acc, category) => {
         const items = data.filter(item => item.category === category);
-        return acc.concat(items.slice(0, 4));
+        return acc.concat(items.slice(0, 3));
     }, []);
 
     const [foods, setFoods] = useState(popMenu)
@@ -67,6 +67,7 @@ const Food = () => {
                         <button onClick={() => filterType("pizza")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Пицца</button>
                         <button onClick={() => filterType("salad")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Салаты</button>
                         <button onClick={() => filterType("chicken")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Chicken</button>
+                        <button onClick={() => filterType("free")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Фри</button>
                         <button onClick={() => filterType("beverages")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Напитки</button>
                         <button onClick={() => filterType("dessert")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Десерт</button>
                         <button onClick={() => filterType("combo")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">Комбо</button>

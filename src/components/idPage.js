@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { data } from "./data/data";
-import {addToCart} from "../store/slices/cartSlice";
+import { addToCart } from "../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
+import { AiFillHeart } from "react-icons/ai";
+import { addToFavorites } from "../store/slices/favoriteSlice";
 
 const IdPage = () => {
     const dispatch = useDispatch();
@@ -17,7 +19,7 @@ const IdPage = () => {
                     <p className="text-gray-500">{elementId.name} - lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam magnam cumque nihil a deleniti,
                         voluptatem dolores nesciunt, delectus saepe enim labore</p>
                 </div>
-                <span>{elementId.price2} ₽</span>                
+                <span>{elementId.price2} ₽</span>
                 <button
                     onClick={() => dispatch(addToCart(elementId))}
                     type="button"
@@ -25,6 +27,9 @@ const IdPage = () => {
                     data-te-ripple-init>
                     В корзину
                 </button>
+                <span className="flex gap-1 items-center text-xl cursor-pointer hover:text-orange-600"
+                    onClick={() => dispatch(addToFavorites(elementId))}>
+                    <AiFillHeart size={35} className=" hover:scale-125 duration-300" />Добавить в избранное</span>
             </div>
 
 
