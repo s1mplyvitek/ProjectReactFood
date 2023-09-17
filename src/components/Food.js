@@ -9,7 +9,7 @@ const Food = () => {
     let categoryArr = ['burger', 'pizza', 'salad', 'free', 'chicken', "beverages", "dessert", "combo"];
     const popMenu = categoryArr.reduce((acc, category) => {
         const items = data.filter(item => item.category === category);
-        return acc.concat(items.slice(0, 3));
+        return acc.concat(items.slice(0, 2));
     }, []);
 
     const [foods, setFoods] = useState(popMenu)

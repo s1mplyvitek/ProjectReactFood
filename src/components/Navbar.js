@@ -41,7 +41,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
         { title: "Кошелек", icon: <FaWallet />, link: "wallet" },
         { title: "Помощь", icon: <MdHelp />, link: "help" },
         { title: "Акции", icon: <AiFillTag />, link: "fill" },
-        { title: "Bests", icon: <BsFillSaveFill />, link: "best" },
+        { title: "Отзывы", icon: <BsFillSaveFill />, link: "best" },
         { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "friends" },
     ];
 
@@ -75,8 +75,10 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                     </div>
 
                     <div className="flex justify-end gap-5 py-1.5">
+                        {!closeDeliv ? <div className=
+                            "fixed w-full h-screen z-20 top-0 left-0 " onClick={() => setCloseDelive(true)}></div> : ""}
 
-                        <div className="hidden min-[1330px]:flex items-center bg-white rounded-full p-1 text-[12px] cursor-pointer relative">
+                        <div className="hidden min-[1330px]:flex items-center bg-white rounded-full p-1 text-[12px] cursor-pointer relative z-20">
                             <div className="flex" onClick={() => setCloseDelive(false)}>
                                 <p className={deliv ? "bg-black text-white rounded-full p-1.5" : "p-1.5 hover:scale-110 duration-200"} onClick={() => setDeliv(true)}>Доставка</p>
                                 <p className={deliv ? "p-1.5 hover:scale-110 duration-200" : "bg-black text-white rounded-full p-1.5"} onClick={() => setDeliv(false)}>Самовывоз</p>
@@ -167,15 +169,33 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                                 </div>
                                 <div className="text-center text-2xl grid">
                                     <span className="">Корзина</span>
-                                    <div className="text-start text-lg grid p-5">
-                                        <p className="mb-14">{nameCart}</p>
-                                        <div className="flex gap-3 pb-3">
-                                            <span className="text-2xl text-bold">сумма: {sum} ₽</span>
-                                            <span className="">Выбрано товаров: {cart.length}</span>
+                                    <div className="text-start text-lg grid px-5">
+                                        <div className="mb-14">{cart.length > 0 ?
+                                            <div>
+                                                <div className="my-8">
+                                                    {nameCart}
+                                                </div>
+                                                <div className="flex gap-3 text-xl justify-between mb-5">
+                                                    <span className="">Выбрано: {cart.length}</span>
+                                                    <span className="">сумма: <span className="text-orange-600">{sum} ₽</span></span>
+                                                    <button onClick={() => dispatch(clearCart())} class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                                                        🗑️
+                                                    </button>
+                                                </div>
+                                                <div className="flex justify-center">
+                                                    <button className=" py-2.5 px-5 mr-2 mb-2 text-base font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-orange-600 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                                        Оформить на {sum} ₽
+                                                    </button>
+                                                </div>
+
+                                            </div> :
+                                            <div className="grid justify-items-center">
+                                                <span className="text-2xl mb-5">пуста</span>
+                                                <p className="mb-5 text-2xl text-orange-600">Вы ничего не выбрали!</p>
+                                                <img src="https://cdn-icons-png.flaticon.com/128/6009/6009591.png" alt="/" />
+                                            </div>}
                                         </div>
-                                        <button onClick={() => dispatch(clearCart())} class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                                            Очистить корзину
-                                        </button>
+
                                     </div>
 
                                 </div>
