@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { AiFillTag, AiOutlineClose, AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai';
+import { AiFillTag, AiOutlineClose, AiOutlineMenu, AiOutlineSearch, AiTwotoneShop } from 'react-icons/ai';
 import navlogo from "../content/footer.png"
 import { Link } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 import { TbTruckDelivery } from "react-icons/tb";
 import { MdFavorite, MdHelp } from "react-icons/md";
-import { FaUserFriends, FaWallet } from "react-icons/fa";
+import { FaUserFriends } from "react-icons/fa";
 import { BsFillSaveFill } from "react-icons/bs";
 import Category from "./Category";
 import { useDispatch } from "react-redux";
@@ -38,7 +38,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
     let navigation = [
         { title: "О нас", icon: <TbTruckDelivery />, link: "about" },
         { title: "Избранное", icon: <MdFavorite />, link: "favor" },
-        { title: "Кошелек", icon: <FaWallet />, link: "wallet" },
+        { title: "Рестораны", icon: <AiTwotoneShop />, link: "wallet" },
         { title: "Помощь", icon: <MdHelp />, link: "help" },
         { title: "Акции", icon: <AiFillTag />, link: "fill" },
         { title: "Отзывы", icon: <BsFillSaveFill />, link: "best" },
