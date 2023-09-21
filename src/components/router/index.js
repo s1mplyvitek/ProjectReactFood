@@ -10,6 +10,7 @@ import FriendsPage from "../pages/FriendsPage";
 import IdPage from "../idPage";
 import MenuCategoriesCards from "../pages/MenuCategoriesCardsPage.js";
 import BestPage from "../pages/BestPage";
+import RestaurantPage from "../pages/RestaurantPage";
 
 
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
         children: [
             {path: "/category/:slug", element: <MenuCategoriesCards />},
             {path: "/catalog/:id", element: <IdPage />},
+            {path: "/place/:id", element: <RestaurantPage />},
             { path: "/", element: <All /> },
             {
                 path: "about", element: <Outlet />,
