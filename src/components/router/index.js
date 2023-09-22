@@ -1,7 +1,7 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import App from "../../App";
 import All from "../All";
-import AboutPage from "../pages/AboutPage";
+import AboutPage from "../pages/aboutPage/AboutPage";
 import FavorPage from "../pages/FavorPage";
 import WallPage from "../pages/WallPage";
 import HelpPage from "../pages/HelpPage";
@@ -20,33 +20,33 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
         children: [
-            {path: "/category/:slug", element: <MenuCategoriesCards />},
-            {path: "/catalog/:id", element: <IdPage />},
-            {path: "/place/:id", element: <RestaurantPage />},
+            { path: "/category/:slug", element: <MenuCategoriesCards /> },
+            { path: "/catalog/:id", element: <IdPage /> },
+            { path: "/place/:id", element: <RestaurantPage /> },
             { path: "/", element: <All /> },
-            {
-                path: "about", element: <Outlet />,
-                children: [
-                    { path: "", element: <AboutPage /> },
-                    {
-                        path: "contacts", element: (
-                            <div className="w-2/3 mx-auto grow">
-                                <a href="tel:+79241234567">89241234567</a>
-                            </div>
-                        )
-                    }
-                ]
-            },                      
-            {path: "favor", element: <FavorPage />},
-            {path: "wallet", element: <WallPage />},
-            {path: "help", element: <HelpPage />},
-            {path: "fill", element: <FillPage />},
-            {path: "friends", element: <FriendsPage />},
-            {path: "best", element: <BestPage />},
+
+            { path: "favor", element: <FavorPage /> },
+            { path: "wallet", element: <WallPage /> },
+            { path: "help", element: <HelpPage /> },
+            { path: "fill", element: <FillPage /> },
+            { path: "best", element: <BestPage /> },
 
         ]
     },
-
+    { path: "/friends", element: <FriendsPage /> },
+    {
+        path: "/about", element: <Outlet />,
+        children: [
+            { path: "", element: <AboutPage /> },
+            {
+                path: "contacts", element: (
+                    <div className="w-2/3 mx-auto grow">
+                        <a href="tel:+79241234567">89241234567</a>
+                    </div>
+                )
+            }
+        ]
+    },
 
 ]);
 

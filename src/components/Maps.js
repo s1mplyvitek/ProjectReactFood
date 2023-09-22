@@ -11,14 +11,14 @@ const Maps = () => {
 
     const defaultState = {
         center: [55.751574, 37.573856],
-        zoom: 9,
+        zoom: 11,
     }
 
   
     return (
 
         <YMaps>
-            <Map defaultState={defaultState} className="w-[1000px] h-[300px]">
+            <Map defaultState={defaultState}  className="w-[1000px] h-[300px]">
 
                 {map.map((item) =>
                     <Placemark geometry={item.coordinates} />

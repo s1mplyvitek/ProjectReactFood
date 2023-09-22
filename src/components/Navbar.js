@@ -19,6 +19,12 @@ const Navbar = ({ cart, sum, nameCart, }) => {
     window.addEventListener('scroll', function () {
         let cartScroll = document.getElementById('scrollFixed');
 
+        let currentUrl = this.window.location.href;
+
+        if (currentUrl.includes("/about")) {
+            return;
+        }
+
         if (window.pageYOffset > 40) {
             cartScroll.style.position = 'fixed';
             cartScroll.style.top = '0.1%';
@@ -36,13 +42,13 @@ const Navbar = ({ cart, sum, nameCart, }) => {
 
 
     let navigation = [
-        { title: "О нас", icon: <TbTruckDelivery />, link: "about" },
+        { title: "О нас", icon: <TbTruckDelivery />, link: "/about" },
         { title: "Избранное", icon: <MdFavorite />, link: "favor" },
         { title: "Рестораны", icon: <AiTwotoneShop />, link: "wallet" },
         { title: "Помощь", icon: <MdHelp />, link: "help" },
         { title: "Акции", icon: <AiFillTag />, link: "fill" },
         { title: "Отзывы", icon: <BsFillSaveFill />, link: "best" },
-        { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "friends" },
+        { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "/friends" },
     ];
 
 
