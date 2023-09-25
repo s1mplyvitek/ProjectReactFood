@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { categories, data } from "./data/data";
 import Cards from "./popCards"
 import { Link } from "react-router-dom";
+import CartProvider from "./providers/CartProvider";
 
 const Food = () => {
 
@@ -91,7 +92,9 @@ const Food = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
                 {foods.map((item) => (
-                    <Cards key={item.id} id={item.id} names={item.name} categories={item.category} images={item.image} prices={item.price} />
+                    <CartProvider>
+                        <Cards key={item.id} id={item.id} names={item.name} price={item.price2} images={item.image} prices={item.price} />
+                    </CartProvider>
                 ))}
             </div>
         </div>

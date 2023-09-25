@@ -30,13 +30,15 @@ const CartProvider = ({ children }) => {
         </div>
 
     ))
+    
+    const itemQty = cart.map((item) => item.qty)
 
     const sum = cart.reduce((sum, item) => {
         sum += item.food.price2 * item.qty;
         return sum;
     }, 0);
 
-    return React.cloneElement(children, { cart, sum, nameCart });
+    return React.cloneElement(children, { cart, sum, nameCart, itemQty });
 };
 
 export default CartProvider;

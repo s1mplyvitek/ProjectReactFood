@@ -11,6 +11,7 @@ import IdPage from "../idPage";
 import MenuCategoriesCards from "../pages/MenuCategoriesCardsPage.js";
 import BestPage from "../pages/BestPage";
 import RestaurantPage from "../pages/RestaurantPage";
+import IdFillPage from "../pages/idPage/IdFillPage";
 
 
 
@@ -23,12 +24,13 @@ const router = createBrowserRouter([
             { path: "/category/:slug", element: <MenuCategoriesCards /> },
             { path: "/catalog/:id", element: <IdPage /> },
             { path: "/place/:id", element: <RestaurantPage /> },
+            { path: "/fill/:id", element: <IdFillPage />},
             { path: "/", element: <All /> },
 
             { path: "favor", element: <FavorPage /> },
             { path: "wallet", element: <WallPage /> },
             { path: "help", element: <HelpPage /> },
-            { path: "fill", element: <FillPage /> },
+            { path: "fills", element: <FillPage /> },
             { path: "best", element: <BestPage /> },
 
         ]

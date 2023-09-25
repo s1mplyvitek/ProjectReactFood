@@ -46,7 +46,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
         { title: "Избранное", icon: <MdFavorite />, link: "favor" },
         { title: "Рестораны", icon: <AiTwotoneShop />, link: "wallet" },
         { title: "Помощь", icon: <MdHelp />, link: "help" },
-        { title: "Акции", icon: <AiFillTag />, link: "fill" },
+        { title: "Акции", icon: <AiFillTag />, link: "fills" },
         { title: "Отзывы", icon: <BsFillSaveFill />, link: "best" },
         { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "/friends" },
     ];
