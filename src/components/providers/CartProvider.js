@@ -20,9 +20,9 @@ const CartProvider = ({ children }) => {
             </div>
             <div className="flex justify-between items-center">
                 <div className="flex items-center text-2xl">
-                    <span className="hover:scale-125 duration-200 cursor-pointer" onClick={() => { dispatch(decreaseItemQty(item.food.id)) }}>﹤</span>
+                    <span className="hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(decreaseItemQty(item.food.id)) }}>﹤</span>
                     <p className="text-lg mx-2">{item.qty}</p>
-                    <span className="mr-2 hover:scale-125 duration-300 cursor-pointer" onClick={() => { dispatch(increaseItemQty(item.food.id)) }}>﹥</span>
+                    <span className="mr-2 hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(increaseItemQty(item.food.id)) }}>﹥</span>
                 </div>
                 <div className="flex text-base">{item.food.price2 * item.qty} ₽</div>
                 <span onClick={() => {dispatch(clearQty(item.food.id))}} className="cursor-pointer pl-2"><AiFillDelete size={23} /></span>

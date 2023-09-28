@@ -6,10 +6,10 @@ import FavorPage from "../pages/FavorPage";
 import WallPage from "../pages/WallPage";
 import HelpPage from "../pages/HelpPage";
 import FillPage from "../pages/FillPage";
-import FriendsPage from "../pages/FriendsPage";
+import WorkPage from "../pages/workPage/WorkPage";
 import IdPage from "../idPage";
 import MenuCategoriesCards from "../pages/MenuCategoriesCardsPage.js";
-import BestPage from "../pages/BestPage";
+import ReviewsPage from "../pages/ReviewsPage";
 import RestaurantPage from "../pages/RestaurantPage";
 import IdFillPage from "../pages/idPage/IdFillPage";
 
@@ -31,11 +31,11 @@ const router = createBrowserRouter([
             { path: "wallet", element: <WallPage /> },
             { path: "help", element: <HelpPage /> },
             { path: "fills", element: <FillPage /> },
-            { path: "best", element: <BestPage /> },
+            { path: "reviews", element: <ReviewsPage /> },
 
         ]
     },
-    { path: "/friends", element: <FriendsPage /> },
+    { path: "/work", element: <WorkPage /> },
     {
         path: "/about", element: <Outlet />,
         children: [

@@ -21,7 +21,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
 
         let currentUrl = this.window.location.href;
 
-        if (currentUrl.includes("/about")) {
+        if (currentUrl.includes("/about") || currentUrl.includes("/work")) {
             return;
         }
 
@@ -45,10 +45,10 @@ const Navbar = ({ cart, sum, nameCart, }) => {
         { title: "О нас", icon: <TbTruckDelivery />, link: "/about" },
         { title: "Избранное", icon: <MdFavorite />, link: "favor" },
         { title: "Рестораны", icon: <AiTwotoneShop />, link: "wallet" },
-        { title: "Помощь", icon: <MdHelp />, link: "help" },
         { title: "Акции", icon: <AiFillTag />, link: "fills" },
-        { title: "Отзывы", icon: <BsFillSaveFill />, link: "best" },
-        { title: "Приглашайте друзей", icon: <FaUserFriends />, link: "/friends" },
+        { title: "Отзывы", icon: <BsFillSaveFill />, link: "reviews" },
+        { title: "Помощь", icon: <MdHelp />, link: "help" },
+        { title: "Вакансия", icon: <FaUserFriends />, link: "/work" },
     ];
 
 
@@ -58,7 +58,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                 <div className="max-[529.9px]:hidden w-2/3 mx-auto flex flex-wrap justify-end gap-4  pt-2">
                     {navigation.map((item) => (
                         <Link to={item.link}>
-                            <div className="flex gap-1 place-content-center text-sm py-1 hover:text-orange-600"><div className="grid place-content-center">{item.icon}</div>{item.title}</div>
+                            <div className="flex gap-1 hover:scale-105 duration-100 active:scale-100 place-content-center text-sm py-1 hover:text-orange-600"><div className="grid place-content-center">{item.icon}</div>{item.title}</div>
                         </Link>
                     ))}
                 </div>
@@ -166,7 +166,7 @@ const Navbar = ({ cart, sum, nameCart, }) => {
                             : "fixed top-0 right-[-100%] w-[400px] h-screen bg-white z-20 duration-300"}>
                             <div className="">
                                 <AiOutlineClose
-                                    onClick={() => setCartSide(!cartSide)} size={30} className="absolute left-4 top-4 cursor-pointer" />
+                                    onClick={() => setCartSide(!cartSide)} size={30} className="absolute left-4 top-4 cursor-pointer hover:rotate-180 duration-500" />
                                 <div className="flex justify-end">
                                     <h2 className="text-2xl p-4">
                                         <span className="font-bold">eDa</span>livery

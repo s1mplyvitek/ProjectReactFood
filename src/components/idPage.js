@@ -27,9 +27,9 @@ const IdPage = () => {
                     data-te-ripple-init>
                     В корзину
                 </button>
-                <span className="flex gap-1 items-center text-xl cursor-pointer hover:text-orange-600"
+                <span className="flex gap-1 items-center text-xl cursor-pointer active:text-orange-400 hover:text-orange-600"
                     onClick={() => dispatch(addToFavorites(elementId))}>
-                    <AiFillHeart size={35} className=" hover:scale-125 duration-300" />Добавить в избранное</span>
+                    <AiFillHeart size={35} className=" hover:scale-125 active:scale-100 duration-100" />Добавить в избранное</span>
             </div>
 
 

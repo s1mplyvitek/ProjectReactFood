@@ -5,11 +5,11 @@ import footlogo from "../content/footer.png"
 
 const Footer = () => {
     return (
-        <footer className="h-full  bg-slate-100 rounded-t-[36px] mt-16">
+        <footer className="h-full  bg-slate-100">
             <div className="flex flex-col items-center min-[1230px]:grid grid-cols-5 gap-5 py-5 w-3/4 mx-auto">
                 <div className="flex flex-col w-40 justify-start">
                     <img className="w-40 mb-3" src={footlogo} alt="не загрузилась" />
-                    <p className="text-[12px] text-gray-500">
+                    <p className="text-[12px] text-gray-500 indent-5">
                         eDalivery - ipsum dolor sit amet consectetur, adipisicing elit. Repellat animi dolores velit dignissimos atque voluptates reiciendis officia minus qui!
                     </p>
                 </div>

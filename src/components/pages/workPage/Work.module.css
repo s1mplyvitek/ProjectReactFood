@@ -1,0 +1,36 @@
+.work {
+    clip-path: ellipse(63% 50% at 50% 30%);
+}
+
+.bg {
+    background-image: url("https://img.freepik.com/free-photo/wooden-board-empty-table-top-on-of-blurred-background_1253-1584.jpg?w=996&t=st=1695840854~exp=1695841454~hmac=b832fc145355310694b5c0029fb718d57e116e5001554635a31c5047d3cd7239");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 90vh;
+}
+
+.bg1 {
+    background-image: url("https://img.freepik.com/free-photo/group-of-chefs-working-in-the-kitchen_53876-65435.jpg?w=1380&t=st=1695902385~exp=1695902985~hmac=95444a412f7499db44b66cb59454b3d34738b8c5d1eb5e0d4776aea05e8defb2");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    overflow: hidden;
+    height: 90vh;
+}
+.bg2 {
+    background-image: url("https://img.freepik.com/free-photo/planks-with-unfocused-background_1253-46.jpg?w=1380&t=st=1695903391~exp=1695903991~hmac=89cb2aefebdd60b82ab827dee05ce45c347b4bef7f631062132685ddbdf5e199");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 70vh;
+}
+
+
+
+/* https://bennettfeely.com/clippy/ */
