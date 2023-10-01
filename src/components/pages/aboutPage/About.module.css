@@ -8,3 +8,6 @@
     font-family: "nunito", sans-serif;
     
 }
+.hero {
+    clip-path: polygon(0 31%, 100% 20%, 100% 90%, 0 78%);
+}
