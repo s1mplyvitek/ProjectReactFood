@@ -2,8 +2,16 @@ import { Link } from "react-router-dom";
 import st from "./About.module.css";
 import burger from "../../../content/logo.png";
 import logo from "../../../content/footer.png";
+import React from "react";
+
+
 
 const AboutPage = () => {
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <>
             <div className="bg-orange-200">
@@ -23,9 +31,9 @@ const AboutPage = () => {
                     </div>
                 </div>
                 <div className={"w-2/3 mx-auto " + st.hero}>
-                    <img 
-                    className="w-full object-cover"
-                    src="https://img.freepik.com/free-photo/woman-holding-mini-burger-wearing-black-gloves_140725-1695.jpg?w=1060&t=st=1696006950~exp=1696007550~hmac=b7714bca3b16f741be77819f6ba4d3677b749c4c9356db0373af985fef99da9f" alt="/" />
+                    <img
+                        className="w-full object-cover"
+                        src="https://img.freepik.com/free-photo/woman-holding-mini-burger-wearing-black-gloves_140725-1695.jpg?w=1060&t=st=1696006950~exp=1696007550~hmac=b7714bca3b16f741be77819f6ba4d3677b749c4c9356db0373af985fef99da9f" alt="/" />
                 </div>
                 <div className="flex w-2/3 mx-auto">
                     <img

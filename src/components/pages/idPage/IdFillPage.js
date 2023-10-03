@@ -7,7 +7,7 @@ import { Link, useParams } from "react-router-dom";
 const IdFillPage = () => {
 
     const { id } = useParams();
-    const fill = useSelector((state) => state.fill)
+    const fill = useSelector((state) => state.action)
     let elementId = fill.find((item) => item.id == id)
 
     return (

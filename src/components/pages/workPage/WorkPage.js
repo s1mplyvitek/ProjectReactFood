@@ -1,6 +1,7 @@
 import logo from "../../../content/logo.png"
 import style from "./Work.module.css"
 import navLogo from "../../../content/footer.png"
+import { Link } from "react-router-dom";
 
 const FriendsPage = () => {
 
@@ -10,7 +11,9 @@ const FriendsPage = () => {
                 <div className={"h-[600px] bg-[#FFAB08] flex justify-center items-center " + style.work}>
                     <div className="grid grid-cols-2 items-center w-[80vh]">
                         <img className="hover:rotate-180 duration-300 " src={logo} alt="/" />
-                        <img className="w-full" src={navLogo} alt="/" />
+                        <Link to="/">
+                            <img className="w-full" src={navLogo} alt="/" />
+                        </Link>
                     </div>
                 </div>
                 <div className="grid w-2/3 mx-auto">

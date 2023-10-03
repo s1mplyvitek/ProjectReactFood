@@ -10,7 +10,7 @@ const RestaurantPage = () => {
     let elementId = restaurant.find((item) => item.id == id)
 
     return (
-        <div className="w-2/3 mx-auto flex flex-col items-center">
+        <div className="w-2/3 mx-auto flex flex-col items-center mb-10">
             <span className="text-center py-10 text-3xl text-orange-600"> eDalivery - {elementId.address}</span>
             <div className="mb-5"><Maps /></div>
             <div className="grid grid-cols-2 text-xl gap-5 relative">

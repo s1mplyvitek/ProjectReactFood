@@ -1,53 +1,37 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 
 
 const HeadLineCards = () => {
-    
+    let action = useSelector((state) => state.action)
+
+
     return (
         <>
-            <div className="w-3/4 mx-auto px-5 py-12 grid md:grid-cols-3 gap-5">
+            <div className="w-3/4 mx-auto px-5 py-12 grid md:grid-cols-3 gap-5 mb-16">
                 {/* Card */}
-                <div className="rounded-xl relative">
-                    {/* Overlay */}
-                    <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
-                        <p className="font-bold text-2xl px-2 pt-4">2 по цене 1</p>
-                        <p className="px-2">До 20 Августа</p>
-                        <button className="border-white bg-white text-black mx-2 absolute bottom-4">Заказать сейчас</button>
+                {action.map((item) =>
+                    <div className="rounded-xl relative shadow-xl skew-y-2 hover:scale-125 hover:z-10 duration-300">
+                        {/* Overlay */}
+                        <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
+                            <p className="font-bold text-2xl px-2 pt-4">{item.name}</p>
+                            <p className="px-2">До 20 Августа</p>
+                            <Link to={`/fill/${item.id}`}>
+                                <button type="button" className="absolute bottom-1 left-1 py-2 px-4 text-base font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-orange-600 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                                    Заказать сейчас!
+                                </button>
+                            </Link>
+                        </div>
+                        <img
+                            className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"
+                            src={item.img}
+                            alt="/" />
                     </div>
-                    <img
-                        className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"
-                        src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvYTAyNi10YXlsb3Ita2lzZXItMjVfMS5qcGc.jpg"
-                        alt="/" />
-                </div>
-                {/* Card */}
-                <div className="rounded-xl relative">
-                    {/* Overlay */}
-                    <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
-                        <p className="font-bold text-2xl px-2 pt-4">Новые рестораны</p>
-                        <p className="px-2"></p>
-                        <button className="border-white bg-white text-black mx-2 absolute bottom-4">Заказать сейчас</button>
-                    </div>
-                    <img
-                        className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"
-                        src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczQ2LW1vbmlrYWdyYWJrb3dza2Etcm9hc3RlZC1wb3JrLWFuZC1wb3RhdG8tc2FsYWQtOC1leWUuanBn.jpg"
-                        alt="/" />
-                </div>
-                {/* Card */}
-                <div className="rounded-xl relative">
-                    {/* Overlay */}
-                    <div className="absolute w-full h-full bg-black/50 rounded-xl text-white">
-                        <p className="font-bold text-2xl px-2 pt-4">Мы так же доставляем десерты</p>
-                        <p className="px-2">Вкусные угощения</p>
-                        <button className="border-white bg-white text-black mx-2 absolute bottom-4">Заказать сейчас</button>
-                    </div>
-                    <img
-                        className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded-xl"
-                        src="https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvaXM5NTY1LWltYWdlLWt3dnlmcTJnLmpwZw.jpg"
-                        alt="/" />
-                </div>
-            </div>           
+                )}
+            </div>
         </>
 
     );

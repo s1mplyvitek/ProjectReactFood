@@ -15,7 +15,7 @@ export const store = configureStore({
         data: dataReducer,
         favorites: favoriteReducer,
         map: mapReducer,
-        fill: fillReducer,
+        action: fillReducer,
         support: supportReducer,
     },
 });

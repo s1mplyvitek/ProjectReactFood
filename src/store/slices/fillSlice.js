@@ -43,7 +43,7 @@ const initialState = [
 
 
 export const fillSlice = createSlice({
-    name: "fill",
+    name: "action",
     initialState: initialState,
     reducers: {},
 });
