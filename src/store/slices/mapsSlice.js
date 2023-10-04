@@ -37,8 +37,8 @@ const initialState = [
     },
 ];;
 
-export const mapSlice = createSlice({
-    name: "map",
+export const mapsSlice = createSlice({
+    name: "maps",
     initialState: initialState,
     reducers: {
         addIdMap: (state, action) => {
@@ -48,6 +48,6 @@ export const mapSlice = createSlice({
     },
 });
 
-export const { addIdMap } = mapSlice.actions;
+export const { addIdMap } = mapsSlice.actions;
 
-export default mapSlice.reducer;
+export default mapsSlice.reducer;

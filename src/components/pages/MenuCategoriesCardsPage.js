@@ -16,12 +16,12 @@ const MenuCategoriesCards = () => {
 
     return (
         <>
-            <h2 className="text-center font-bold text-3xl text-orange-500 p-5">{addCategory.name}</h2>
-            <div className="grid grid-cols-4 gap-5 py-5 w-2/3 mx-auto">
+            <h2 className="text-center font-bold text-3xl text-orange-500 p-5 ">{addCategory.name}</h2>
+            <div className="grid grid-cols-4 gap-5 py-5 w-2/3 mx-auto mb-16">
                 {data.map((item) => (item.category === category ?
                     (
                         <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">
-                            <Link to={`/catalog/${item.id}`}>
+                            <Link to={`/dish/${item.id}`}>
                                 <img className="h-[200px] w-full object-cover rounded-t-lg" src={item.image} alt="/" />
                                 <div className="p-2">
                                     <p className="text-black font-bold pb-3">{item.name}</p>

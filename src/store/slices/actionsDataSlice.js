@@ -42,12 +42,12 @@ const initialState = [
 ];
 
 
-export const fillSlice = createSlice({
-    name: "action",
+export const actionsSlice = createSlice({
+    name: "actions",
     initialState: initialState,
     reducers: {},
 });
 
-export const { } = fillSlice.actions;
+export const { } = actionsSlice.actions;
 
-export default fillSlice.reducer;
+export default actionsSlice.reducer;

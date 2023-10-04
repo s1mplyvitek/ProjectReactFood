@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import Maps from "../Maps";
+import Maps from "../../Maps";
 
 
 
-const RestaurantPage = () => {
+const IdRestaurantPage = () => {
     const { id } = useParams();
-    const restaurant = useSelector((state) => state.data)
+    const restaurant = useSelector((state) => state.restaurants)
     let elementId = restaurant.find((item) => item.id == id)
 
     return (
@@ -27,4 +27,4 @@ const RestaurantPage = () => {
     );
 };
 
-export default RestaurantPage;
+export default IdRestaurantPage;

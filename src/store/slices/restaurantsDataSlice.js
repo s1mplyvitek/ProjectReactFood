@@ -68,14 +68,14 @@ const fastFoodRestaurants = [
 ];
 
 
-export const dataSlice = createSlice({
-    name: "data",
+export const restaurantsSlice = createSlice({
+    name: "restaurants",
     initialState: fastFoodRestaurants,
     reducers: {
 
     },
 });
 
-export const { } = dataSlice.actions;
+export const { } = restaurantsSlice.actions;
 
-export default dataSlice.reducer;
+export default restaurantsSlice.reducer;

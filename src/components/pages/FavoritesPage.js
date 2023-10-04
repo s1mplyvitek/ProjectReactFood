@@ -2,14 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../store/slices/cartSlice";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { removeFromFavorites } from "../../store/slices/favoriteSlice";
+import { removeFromFavorites } from "../../store/slices/favoritesSlice";
 
-const FavorPage = () => {
+const FavoritesPage = () => {
     const favor = useSelector((state) => state.favorites);
     const dispatch = useDispatch()
 
     return (
-        <div className="w-2/3 mx-auto py-5 grid grow"  >
+        <div className="w-2/3 mx-auto py-5 grid grow mb-16 ">
             <span className="text-center mb-5 text-orange-600 text-3xl font-bold">Любимые блюда</span>
             <div className="grid grid-cols-4 gap-3">
                 {favor.map((item) =>
@@ -45,4 +45,4 @@ const FavorPage = () => {
     );
 };
 
-export default FavorPage;
+export default FavoritesPage;

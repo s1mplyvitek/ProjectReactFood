@@ -43,11 +43,11 @@ const Navbar = ({ cart, sum, nameCart, }) => {
 
     let navigation = [
         { title: "О нас", icon: <TbTruckDelivery />, link: "/about" },
-        { title: "Избранное", icon: <MdFavorite />, link: "favor" },
-        { title: "Рестораны", icon: <AiTwotoneShop />, link: "wallet" },
-        { title: "Акции", icon: <AiFillTag />, link: "fills" },
+        { title: "Избранное", icon: <MdFavorite />, link: "favorites" },
+        { title: "Рестораны", icon: <AiTwotoneShop />, link: "restaurants" },
+        { title: "Акции", icon: <AiFillTag />, link: "actions" },
         { title: "Отзывы", icon: <BsFillSaveFill />, link: "reviews" },
-        { title: "Помощь", icon: <MdHelp />, link: "help" },
+        { title: "Помощь", icon: <MdHelp />, link: "support" },
         { title: "Вакансия", icon: <FaUserFriends />, link: "/work" },
     ];
 

@@ -4,11 +4,11 @@ import { Link, useParams } from "react-router-dom";
 
 
 
-const IdFillPage = () => {
+const IdActionPage = () => {
 
     const { id } = useParams();
-    const fill = useSelector((state) => state.action)
-    let elementId = fill.find((item) => item.id == id)
+    const action = useSelector((state) => state.actions)
+    let elementId = action.find((item) => item.id == id)
 
     return (
         <div className="flex grow">
@@ -18,7 +18,7 @@ const IdFillPage = () => {
                 </div>
                 <div>
                     <div className="flex gap-3 items-center">
-                        <Link to={"/fills"}>
+                        <Link to={"/actions"}>
                             <span className="rounded-full p-1 cursor-pointer hover:text-orange-600 mb-7">
                                 <AiOutlineArrowLeft size={25} />
                             </span>
@@ -37,4 +37,4 @@ const IdFillPage = () => {
     );
 };
 
-export default IdFillPage;
+export default IdActionPage;

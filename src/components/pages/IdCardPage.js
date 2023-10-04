@@ -1,17 +1,17 @@
 import { useParams } from "react-router-dom";
-import { data } from "./data/data";
-import { addToCart } from "../store/slices/cartSlice";
+import { data } from "../data/data";
+import { addToCart } from "../../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
 import { AiFillHeart } from "react-icons/ai";
-import { addToFavorites } from "../store/slices/favoriteSlice";
+import { addToFavorites } from "../../store/slices/favoritesSlice";
 
-const IdPage = () => {
+const IdCardPage = () => {
     const dispatch = useDispatch();
     const { id } = useParams();
     let elementId = data.find((item) => item.id == id)
 
     return (
-        <div className="w-2/3 mx-auto flex py-5 gap-5">
+        <div className="w-2/3 mx-auto flex py-5 gap-5 ">
             <img className="h-[600px] w-[400px] object-cover rounded-lg" src={elementId.image} alt="/" />
             <div className="grid grid-cols-1 content-start gap-5">
                 <div>
@@ -37,4 +37,4 @@ const IdPage = () => {
     );
 };
 
-export default IdPage;
+export default IdCardPage;

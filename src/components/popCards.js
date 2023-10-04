@@ -55,7 +55,7 @@ const Cards = ({ names, categories, images, prices, key, id, price, itemQty,}) =
                     </div>
                     <div className="flex justify-between text-xl items-center">
                         <div>
-                            <Link to={`/catalog/${id}`}>
+                            <Link to={`/dish/${id}`}>
                                 <button type="button" class="focus:outline-none text-white bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg
                               px-24 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">
                                     Добавить

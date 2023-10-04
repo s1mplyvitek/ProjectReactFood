@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
-import Maps from "../Maps";
+import Maps from "../../Maps";
 import { Link } from "react-router-dom";
-import { addIdMap } from "../../store/slices/mapSlice";
+import { addIdMap } from "../../../store/slices/mapsSlice";
 
-const WallPage = () => {
+const RestaurantsPage = () => {
 
-    const restaurants = useSelector((state) => state.data)
+    const restaurants = useSelector((state) => state.restaurants)
     const dispatch = useDispatch();
 
     return (
@@ -17,7 +17,7 @@ const WallPage = () => {
 
             <div className="grid grid-cols-4 gap-3 ">
                 {restaurants.map((item) =>
-                    <Link to={`/place/${item.id}`}>
+                    <Link to={`/restauran/${item.id}`}>
                         <div onClick={() => dispatch(addIdMap(item))} className="rounded-lg overflow-hidden shadow-2xl hover:shadow-none duration-300 cursor-pointer">
                             <img src={item.image} alt="/" />
                             <div className="p-2">
@@ -38,4 +38,4 @@ const WallPage = () => {
     );
 };
 
-export default WallPage;
+export default RestaurantsPage;

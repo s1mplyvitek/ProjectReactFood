@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 const Maps = () => {
 
 
-    const map = useSelector((state) => state.map)
+    const map = useSelector((state) => state.maps)
 
 
     const defaultState = {

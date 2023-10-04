@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 
 
-const HelpPage = () => {
+const SupportPage = () => {
 
     const support = useSelector((state) => state.support)
 
@@ -120,4 +120,4 @@ const HelpPage = () => {
     );
 };
 
-export default HelpPage;
+export default SupportPage;

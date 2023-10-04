@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./slices/cartSlice";
-import dataReducer from "./slices/dataSlice";
-import favoriteReducer from "./slices/favoriteSlice";
-import mapReducer from "./slices/mapSlice";
-import fillReducer from "./slices/fillSlice";
+import restaurantsReducer from "./slices/restaurantsDataSlice";
+import favoritesReducer from "./slices/favoritesSlice";
+import mapsReducer from "./slices/mapsSlice";
+import actionsReducer from "./slices/actionsDataSlice";
 import supportReducer from "./slices/supportSlice"
 
 
@@ -12,10 +12,10 @@ import supportReducer from "./slices/supportSlice"
 export const store = configureStore({
     reducer: {
         cart: cartReducer,
-        data: dataReducer,
-        favorites: favoriteReducer,
-        map: mapReducer,
-        action: fillReducer,
+        restaurants: restaurantsReducer,
+        favorites: favoritesReducer,
+        maps: mapsReducer,
+        actions: actionsReducer,
         support: supportReducer,
     },
 });
