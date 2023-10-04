@@ -14,7 +14,7 @@ const FavoritesPage = () => {
             <div className="grid grid-cols-4 gap-3">
                 {favor.map((item) =>
                     <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">
-                        <Link to={`/catalog/${item.food.id}`}>
+                        <Link to={`/dish/${item.food.id}`}>
                             <img className="h-[200px] w-full object-cover rounded-t-lg" src={item.food.image} alt="/" />
                             <div className="p-2">
                                 <p className="text-black font-bold pb-3">{item.food.name}</p>
