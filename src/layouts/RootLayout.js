@@ -1,8 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import CartProvider from "../components/providers/CartProvider";
 import FooterLayout from "../layouts/FooterLayout";
 import React from "react";
+import HeaderLayout from "./HeaderLayout";
 
 
 
@@ -18,9 +17,7 @@ const RootLayout = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            <CartProvider>
-                <Navbar />
-            </CartProvider>
+            <HeaderLayout />
             <Outlet></Outlet>
             <FooterLayout />
         </div>

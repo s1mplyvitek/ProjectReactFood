@@ -10,7 +10,7 @@ const FooterCompany = () => {
                 <Link to="/about">
                     <li >О нас</li>
                 </Link>
-                <Link to="wallet">
+                <Link to="restaurants">
                     <li>Рестораны</li>
                 </Link>
             </ul>

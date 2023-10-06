@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { categories } from "./data/data";
-const Category = () => {
+import { categories } from "../data/data";
+
+
+
+const CategoriesHeader = () => {
 
     const [showButton, setShowButton] = useState(false);
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -13,7 +17,7 @@ const Category = () => {
 
     const handleScroll = () => {
 
-        if (window.pageYOffset > 70) {
+        if (window.pageYOffset > 95) {
             setShowButton(true);
         } else {
             setShowButton(false);
@@ -21,7 +25,8 @@ const Category = () => {
     };
 
     return (
-        <div className="w-full  bg-orange-200 grid justify-items-center sticky top-0 z-10">
+
+        <div className={showButton ? "fixed top-0 left-0 right-0 bg-orange-200 grid justify-items-center z-10" : "w-full  bg-orange-200 grid justify-items-center z-10"}>
 
             <div className="flex flex-wrap py-2 max-[520px]:gap-1 gap-6 w-2/3 ">
                 <>
@@ -33,18 +38,19 @@ const Category = () => {
                                     <img className="w-8" src={item.image} alt={item.name} />
                                     <h2 className="sm:text-lg text-sm hover:text-orange-600">{item.name}</h2>
                                 </div>}
-                            {showButton && <div className="">                                
+                            {showButton && <div className="">
                                 <h2 className="text-sm sm:text-base   hover:text-orange-600">{item.name}</h2>
                             </div>}
 
                         </Link>
 
-                    ))}                    
+                    ))}
                 </>
             </div>
         </div>
+
     );
 
 };
 
-export default Category;
+export default CategoriesHeader;

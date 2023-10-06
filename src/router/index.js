@@ -1,6 +1,6 @@
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import All from "../components/All";
+import MainLayout from "../layouts/MainLayout";
 import AboutPage from "../components/pages/aboutPage/AboutPage";
 import FavoritesPage from "../components/pages/FavoritesPage";
 import RestaurantsPage from "../components/pages/restaurantsPage/RestaurantsPage";
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
             { path: "/dish/:id", element: <IdCardPage /> },
             { path: "/restauran/:id", element: <IdRestaurantPage /> },
             { path: "/action/:id", element: <IdActionPage /> },
-            { path: "/", element: <All /> },
+            { path: "/", element: <MainLayout /> },
 
             { path: "favorites", element: <FavoritesPage /> },
             { path: "restaurants", element: <RestaurantsPage /> },

@@ -4,7 +4,9 @@ import restaurantsReducer from "./slices/restaurantsDataSlice";
 import favoritesReducer from "./slices/favoritesSlice";
 import mapsReducer from "./slices/mapsSlice";
 import actionsReducer from "./slices/actionsDataSlice";
-import supportReducer from "./slices/supportSlice"
+import supportReducer from "./slices/supportSlice";
+import sidebarNavReducer from "./slices/sidebarNavSlice";
+import sidebarCartReducer from "./slices/sidebarCartSlice";
 
 
 
@@ -17,5 +19,7 @@ export const store = configureStore({
         maps: mapsReducer,
         actions: actionsReducer,
         support: supportReducer,
+        navside: sidebarNavReducer,
+        cartside: sidebarCartReducer,
     },
 });

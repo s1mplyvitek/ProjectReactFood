@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 Modal.setAppElement('#root');
 
-const Cards = ({ names, categories, images, prices, key, id, price, itemQty,}) => {
+const PopCardsModal = ({ names, images, prices, key, id, price, itemQty, }) => {
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -74,4 +74,4 @@ const Cards = ({ names, categories, images, prices, key, id, price, itemQty,}) =
     );
 };
 
-export default Cards;
+export default PopCardsModal;
