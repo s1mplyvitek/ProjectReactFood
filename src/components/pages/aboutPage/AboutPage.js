@@ -3,6 +3,7 @@ import st from "./About.module.css";
 import burger from "../../../content/logo.png";
 import logo from "../../../content/footer.png";
 import React from "react";
+import burgerUp from "../../../content/burgerUp.png";
 
 
 
@@ -14,32 +15,45 @@ const AboutPage = () => {
 
     return (
         <>
-            <div className="bg-orange-200">
+
+            <div className="bg-[#ffad08e3] ">
                 <div className={"h-[500px] bg-[#FFAB08] " + st.about}>
                     <div className="flex justify-center p-5">
                         <Link to={"/"}>
-                            <img className="cursor-pointer animate-[logo_3s_2_alternate]" src={logo} alt="/" />
+                            <img className="cursor-pointer animate-[logo_1s_2_alternate]" src={logo} alt="/" />
                         </Link></div>
                     <div className="w-3/5 mx-auto grid grid-cols-2">
-                        <div className="grid animate-[burger_2s_1s_ease-in_2_alternate] "><img src={burger} alt="/" /></div>
+                        <div className="grid animate-[burger_1s_ease-in_2_alternate] "><img src={burger} alt="/" /></div>
                         <div className="text-5xl grid justify-items-start place-items-center">
-                            <h2 className="-skew-y-6 animate-[slogo_2s_ease-in-out]">
+                            <h2 className="-skew-y-6 animate-[slogo_1s_ease-in-out]">
                                 <span className="text-[#FFFFFF]">Lorem ipsum dolor sit </span><tr />
                                 <span className="text-[#FF5C00]">commodi neque repellat</span>
                             </h2>
                         </div>
                     </div>
                 </div>
-                <div className={"w-2/3 mx-auto " + st.hero}>
-                    <img
-                        className="w-full object-cover"
-                        src="https://img.freepik.com/free-photo/woman-holding-mini-burger-wearing-black-gloves_140725-1695.jpg?w=1060&t=st=1696006950~exp=1696007550~hmac=b7714bca3b16f741be77819f6ba4d3677b749c4c9356db0373af985fef99da9f" alt="/" />
+                <div className={st.mainDiv}>
+                    <div className={"" + st.bg}>
+                        <h1 className="text-4xl text-white">
+                            Lorem ipsum dolor sit, amet consectetur!
+                        </h1>
+                    </div>
                 </div>
-                <div className="flex w-2/3 mx-auto">
-                    <img
-                        className="w-full object-cover h-[400px] skew-y-3"
-                        src="https://img.freepik.com/free-photo/fast-food-menu-for-two-person-in-white-plate_114579-2515.jpg?w=996&t=st=1696002885~exp=1696003485~hmac=3f1ec83674a898806ed414e35de30b02fe80530708250bc963f1bed6e078f8e6" alt="/" />
+                <div className={st.mainDiv}>
+                    <div className={"w-full mx-auto " + st.bg1}>
+                        <img className="mx-auto ml-[70vh]" src={burgerUp} alt="/" />
+                    </div>
                 </div>
+
+                <div>
+                    <img 
+                    className={"w-2/3 mx-auto " + st.hero}
+                    src="https://img.freepik.com/free-photo/chicken-burger-bun-lettuce-tomato-meaf-cheese-french-fries-mayonnaise-ketchup-side-view_141793-3713.jpg?w=1380&t=st=1697043965~exp=1697044565~hmac=e66595c53d0ccb731f2868b7703633d94556e67842d41b7a6ecd522f84259f97"
+                        alt="/"
+                    />
+                </div>
+
+
                 <div className="w-2/3 mx-auto grid justify-items-center text-amber-900">
                     <h1 className="my-5 text-3xl ">eDalivery</h1>
                     <p className="indent-8 mb-3">

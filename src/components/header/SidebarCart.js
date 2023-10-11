@@ -1,25 +1,26 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setSidebarCart } from "../../store/slices/sidebarCartSlice";
-import { AiOutlineClose } from "react-icons/ai";
-import { clearCart } from "../../store/slices/cartSlice";
+import { AiFillDelete, AiOutlineClose } from "react-icons/ai";
+import { clearCart, clearQty, decreaseItemQty, increaseItemQty } from "../../store/slices/cartSlice";
 
 
 
-const SidebarCart = ({ cart, nameCart, sum }) => {
+const SidebarCart = ({ cart, sum }) => {
 
     const dispatch = useDispatch();
-    const bool = useSelector((state) => state.cartside)
+    const bool = useSelector((state) => state.cartside);
+
 
     return (
         <>
             {/*Overlay*/}
             {bool ? <div className=
-                "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 " onClick={() => dispatch(setSidebarCart())}></div> : ""}
+                "bg-black/80 fixed w-full h-screen z-40 top-0 left-0 " onClick={() => dispatch(setSidebarCart())}></div> : ""}
             {/* Side */}
 
             <div className={bool
-                ? "fixed top-0 right-0 w-[400px] h-screen bg-white z-20 duration-300"
-                : "fixed top-0 right-[-100%] w-[400px] h-screen bg-white z-20 duration-300"}>
+                ? "fixed top-0 right-0 w-[400px] h-screen bg-white z-40 duration-300"
+                : "fixed top-0 right-[-100%] w-[400px] h-screen bg-white z-40 duration-300"}>
                 <div className="">
                     <AiOutlineClose
                         onClick={() => dispatch(setSidebarCart())} size={30} className="absolute left-4 top-4 cursor-pointer hover:rotate-180 duration-500" />
@@ -35,7 +36,23 @@ const SidebarCart = ({ cart, nameCart, sum }) => {
                             <div className="mb-14">{cart.length > 0 ?
                                 <div>
                                     <div className="my-8">
-                                        {nameCart}
+                                        {cart.map((item) => (
+                                            <div className="flex justify-between items-center gap-1 text-base">
+                                                <div className="flex items-center gap-1 py-1 ">
+                                                    <img className="w-7 h-10 object-cover rounded-sm " src={item.food.image} alt="/" />
+                                                    <span>{item.food.name}</span>
+                                                </div>
+                                                <div className="flex justify-between items-center">
+                                                    <div className="flex items-center text-2xl">
+                                                        <span className="hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(decreaseItemQty(item.food.id)) }}>﹤</span>
+                                                        <p className="text-lg mx-2">{item.qty}</p>
+                                                        <span className="mr-2 hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(increaseItemQty(item.food.id)) }}>﹥</span>
+                                                    </div>
+                                                    <div className="flex text-base">{item.food.price * item.qty} ₽</div>
+                                                    <span onClick={() => { dispatch(clearQty(item.food.id)) }} className="cursor-pointer pl-2"><AiFillDelete size={23} /></span>
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                     <div className="flex gap-3 text-xl justify-between mb-5">
                                         <span className="">Выбрано: {cart.length}</span>

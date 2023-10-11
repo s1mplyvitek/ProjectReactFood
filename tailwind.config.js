@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       keyframes: {
         burger: {
-          '100%': { transform: 'translate(30vh)' },
+          '100%': { opacity: 0, transform: 'translate(20vh)' },
+          "0%": { opacity: 1 },
         },
         logo: {
 
@@ -15,7 +16,7 @@ module.exports = {
 
           // '100%': { transform: 'rotate(2deg)' },          
           '0%': { opacity: 0 },
-          '100%': { opacity: 1, transform: 'rotate(0.1deg)'},
+          '100%': { opacity: 1, transform: 'rotate(0.1deg)' },
         }
       }
     },

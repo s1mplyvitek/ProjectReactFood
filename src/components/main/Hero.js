@@ -39,7 +39,7 @@ const Hero = () => {
 
   return (
     <div className='h-[650px] w-full m-auto pt-5 relative group mb-20'>
-      <div className="absolute w-full h-1/2 text-gray-200 flex flex-col justify-center ml-14 px-24">
+      <div className="absolute w-full h-1/2 text-gray-200 flex flex-col justify-center px-24">
         <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"><span className="text-orange-600">Lorem </span>Dolor</h1>
         <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Ipsum <span className="text-orange-600"><span className="italic">еDa</span>livery</span></h1>
       </div>

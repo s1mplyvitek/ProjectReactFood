@@ -1,13 +1,85 @@
-
-
 .about {
     clip-path: ellipse(67% 57% at 49% 35%);
 }
 
 .font {
     font-family: "nunito", sans-serif;
-    
+
 }
+
 .hero {
     clip-path: polygon(0 31%, 100% 20%, 100% 90%, 0 78%);
+}
+
+.bg {
+    box-sizing: border-box;
+    min-height: 100vh;
+    transform-style: inherit;
+    text-align: center;
+    padding-top: 30%;
+    width: 100vw;
+
+
+}
+
+.bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transform-origin: center;
+    min-height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/close-up-hand-holding-tasty-burger_23-2149160037.jpg?w=1380&t=st=1697032713~exp=1697033313~hmac=d044ebf9f4224f0ec7ba4d56b50001de7d133622cb376cad32fba2f3befe99d4");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+
+}
+
+
+.mainDiv {
+    margin: 0;    
+    transform-style: preserve-3d;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+
+}
+
+.mainDiv::-webkit-scrollbar {
+    width: 1px;
+}
+
+.bg1 {
+    box-sizing: border-box;
+    min-height: 80vh;
+    transform-style: inherit;
+    text-align: center;
+    padding-top: 30%;
+    width: 100vw;
+
+
+}
+
+.bg1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    transform-origin: center;
+    min-height: 80vh;
+    background-image: url("https://img.freepik.com/free-photo/empty-white-plate-on-wood-table_1150-12274.jpg?w=1380&t=st=1697036288~exp=1697036888~hmac=8f300ae1033516750ecb298ea039f8deb703d4afe30c828f7cd5a17247c71335");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+
 }

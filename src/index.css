@@ -7,6 +7,22 @@
   html {
     font-family: "nunito", sans-serif;
     scroll-behavior: smooth;
+
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.7vw;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgb(241, 239, 239);
+    box-shadow: 0 0 2px rgba(0,0,0,.2) inset;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(251 146 60);
+    border-radius: 8px;
+    border: 3px solid rgb(241, 239, 239);
   }
 }
 

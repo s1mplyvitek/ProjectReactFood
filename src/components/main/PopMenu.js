@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { data } from "../data/data";
-import Cards from "./PopCardsModal";
 import CartProvider from "../providers/CartProvider";
+import PopCardsModal from "./PopCardsModal";
 
 const PopMenu = () => {
 
@@ -62,10 +62,10 @@ const PopMenu = () => {
                 <div>
                     <p className="font-bold text-gray-700">Фильтр по цене</p>
                     <div className="flex justify-between max-w-[390px] w-full">
-                        <button onClick={() => filterPrice("$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$</button>
-                        <button onClick={() => filterPrice("$$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$</button>
-                        <button onClick={() => filterPrice("$$$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$$</button>
-                        <button onClick={() => filterPrice("$$$$")} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">$$$$</button>
+                        <button onClick={() => filterPrice(100)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">100</button>
+                        <button onClick={() => filterPrice(150)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">150</button>
+                        <button onClick={() => filterPrice(200)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">200</button>
+                        <button onClick={() => filterPrice(250)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">250</button>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ const PopMenu = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
                 {foods.map((item) => (
                     <CartProvider>
-                        <Cards key={item.id} id={item.id} names={item.name} price={item.price2} images={item.image} prices={item.price} />
+                        <PopCardsModal key={item.id} item={item} id={item.id} name={item.name} image={item.image} price={item.price} />
                     </CartProvider>
                 ))}
             </div>

@@ -65,7 +65,7 @@ const Header = ({ sum }) => {
 
                         {/* Cart button */}
 
-                        <div id="scrollFixed" onClick={() => dispatch(setSidebarCart())} className="flex z-20 gap-5">
+                        <div id="scrollFixed" onClick={() => dispatch(setSidebarCart())} className="flex z-30 gap-5">
                             <div className="flex">
                                 <span className="text-xs ml-5  rounded-lg text-black p-1">{sum} ₽</span>
                                 <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">

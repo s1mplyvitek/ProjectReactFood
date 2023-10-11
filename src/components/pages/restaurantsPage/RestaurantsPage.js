@@ -30,8 +30,6 @@ const RestaurantsPage = () => {
                             </div>
                         </div>
                     </Link>
-
-
                 )}
             </div>
         </div>

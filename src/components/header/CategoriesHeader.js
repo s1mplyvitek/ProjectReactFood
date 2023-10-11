@@ -26,7 +26,7 @@ const CategoriesHeader = () => {
 
     return (
 
-        <div className={showButton ? "fixed top-0 left-0 right-0 bg-orange-200 grid justify-items-center z-10" : "w-full  bg-orange-200 grid justify-items-center z-10"}>
+        <div className={showButton ? "fixed top-0 left-0 right-0 bg-orange-200 grid justify-items-center z-20" : "w-full  bg-orange-200 grid justify-items-center z-10"}>
 
             <div className="flex flex-wrap py-2 max-[520px]:gap-1 gap-6 w-2/3 ">
                 <>
