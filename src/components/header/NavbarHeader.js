@@ -41,15 +41,15 @@ const NavbarHeader = () => {
             {/* Mobile Menu */}
             {/* Overlay */}
             {bool ? <div className=
-                "bg-black/80 fixed w-full h-screen z-20 top-0 left-0 " onClick={() => dispatch(setSidebar())}></div> : ""}
+                "bg-black/80 fixed w-full h-screen z-40 top-0 left-0 " onClick={() => dispatch(setSidebar())}></div> : ""}
 
 
 
             {/* Side drawer menu */}
 
             <div className={bool
-                ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-20 duration-300"
-                : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-20 duration-300"}>
+                ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-40 duration-300"
+                : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-40 duration-300"}>
                 <AiOutlineClose
                     onClick={() => dispatch(setSidebar())} size={30} className="absolute right-4 top-4 cursor-pointer" />
                 <h2 className="text-2xl p-4">

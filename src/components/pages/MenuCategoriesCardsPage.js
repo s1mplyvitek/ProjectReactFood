@@ -17,7 +17,7 @@ const MenuCategoriesCards = () => {
     return (
         <>
             <h2 className="text-center font-bold text-3xl text-orange-500 p-5 ">{addCategory.name}</h2>
-            <div className="grid grid-cols-4 gap-5 py-5 w-2/3 mx-auto mb-16">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-5 w-2/3 mx-auto mb-16">
                 {data.map((item) => (item.category === category ?
                     (
                         <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">
@@ -31,11 +31,11 @@ const MenuCategoriesCards = () => {
                                 </div>
                             </Link>
                             <div className="flex justify-between mb-2 p-2">
-                                <span className="font-bold text-black text-lg">{item.price} ₽</span>
+                                <span className="font-bold text-black lg:text-lg">{item.price} ₽</span>
                                 <button
                                     onClick={() => dispatch(addToCart(item))}
                                     type="button"
-                                    class="inline-block rounded border-2 active:bg-orange-600 border-neutral-800 px-6 text-[12px] font-medium uppercase leading-normal text-neutral-800 transition duration-150 ease-in-out hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800 focus:border-neutral-800 focus:text-neutral-800 focus:outline-none focus:ring-0 active:border-neutral-900 active:text-neutral-900 dark:border-neutral-900 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 dark:hover:text-neutral-900 dark:focus:border-neutral-900 dark:focus:text-neutral-900 dark:active:border-neutral-900 dark:active:text-neutral-900"
+                                    class="inline-block rounded max-w-[200px] min-w-[50px] border-2 active:bg-orange-600 border-neutral-800 px-6 text-[12px] font-medium uppercase leading-normal text-neutral-800 transition duration-150 ease-in-out hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800 focus:border-neutral-800 focus:text-neutral-800 focus:outline-none focus:ring-0 active:border-neutral-900 active:text-neutral-900 dark:border-neutral-900 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 dark:hover:text-neutral-900 dark:focus:border-neutral-900 dark:focus:text-neutral-900 dark:active:border-neutral-900 dark:active:text-neutral-900"
                                     data-te-ripple-init>
                                     В корзину
                                 </button>

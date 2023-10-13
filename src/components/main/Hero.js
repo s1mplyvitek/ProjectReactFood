@@ -38,7 +38,7 @@ const Hero = () => {
   };
 
   return (
-    <div className='h-[650px] w-full m-auto pt-5 relative group mb-20'>
+    <div className='lg:h-[650px] lg:w-full h-[300px] m-auto pt-5 relative group mb-20'>
       <div className="absolute w-full h-1/2 text-gray-200 flex flex-col justify-center px-24">
         <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold"><span className="text-orange-600">Lorem </span>Dolor</h1>
         <h1 className="px-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">Ipsum <span className="text-orange-600"><span className="italic">еDa</span>livery</span></h1>
@@ -48,11 +48,11 @@ const Hero = () => {
         className='w-full h-full bg-center bg-cover duration-500'
       ></div>
       {/* Left Arrow */}
-      <div className='hidden group-hover:block absolute ml-24 top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className='hidden group-hover:block absolute md:ml-24 top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className='hidden group-hover:block absolute mr-24 top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className='hidden group-hover:block absolute md:mr-24 top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       <div className='flex top-4 justify-center py-2'>

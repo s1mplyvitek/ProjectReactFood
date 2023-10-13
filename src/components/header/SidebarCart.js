@@ -19,8 +19,8 @@ const SidebarCart = ({ cart, sum }) => {
             {/* Side */}
 
             <div className={bool
-                ? "fixed top-0 right-0 w-[400px] h-screen bg-white z-40 duration-300"
-                : "fixed top-0 right-[-100%] w-[400px] h-screen bg-white z-40 duration-300"}>
+                ? "fixed top-0 right-0 w-[300px] md:w-[450px] h-screen bg-white z-40 duration-300"
+                : "fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-40 duration-300"}>
                 <div className="">
                     <AiOutlineClose
                         onClick={() => dispatch(setSidebarCart())} size={30} className="absolute left-4 top-4 cursor-pointer hover:rotate-180 duration-500" />
@@ -44,9 +44,9 @@ const SidebarCart = ({ cart, sum }) => {
                                                 </div>
                                                 <div className="flex justify-between items-center">
                                                     <div className="flex items-center text-2xl">
-                                                        <span className="hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(decreaseItemQty(item.food.id)) }}>﹤</span>
+                                                        <span className="select-none hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(decreaseItemQty(item.food.id)) }}>﹤</span>
                                                         <p className="text-lg mx-2">{item.qty}</p>
-                                                        <span className="mr-2 hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(increaseItemQty(item.food.id)) }}>﹥</span>
+                                                        <span className="select-none mr-2 hover:scale-125 duration-100 active:scale-100 cursor-pointer" onClick={() => { dispatch(increaseItemQty(item.food.id)) }}>﹥</span>
                                                     </div>
                                                     <div className="flex text-base">{item.food.price * item.qty} ₽</div>
                                                     <span onClick={() => { dispatch(clearQty(item.food.id)) }} className="cursor-pointer pl-2"><AiFillDelete size={23} /></span>

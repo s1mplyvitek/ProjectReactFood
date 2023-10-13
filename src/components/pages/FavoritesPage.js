@@ -10,7 +10,7 @@ const FavoritesPage = () => {
 
     return (
         <div className="w-2/3 mx-auto py-5 grid grow mb-16 ">
-            <span className="text-center mb-5 text-orange-600 text-3xl font-bold">Любимые блюда</span>
+            <span className="text-center mb-5 text-orange-600 text-3xl font-bold mt-10 min-[530px]:mt-0">Любимые блюда</span>
             <div className="grid grid-cols-4 gap-3">
                 {favor.map((item) =>
                     <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">

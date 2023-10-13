@@ -20,11 +20,13 @@ const Header = ({ sum }) => {
 
         let currentUrl = this.window.location.href;
 
+        let screenWidth = window.innerWidth;
+
         if (currentUrl.includes("/about") || currentUrl.includes("/work")) {
             return;
         }
 
-        if (window.pageYOffset > 40) {
+        if (window.pageYOffset > 40 && screenWidth >= 1024) {
             cartScroll.style.position = 'fixed';
             cartScroll.style.top = '0.1%';
             cartScroll.style.right = '16.6%';
@@ -39,7 +41,7 @@ const Header = ({ sum }) => {
 
     return (
         <>
-            <div className="w-full bg-slate-100">
+            <div className="fixed top-0 left-0 right-0 min-[530px]:static  w-full z-10 bg-slate-100">
                 <div className="w-2/3 mx-auto flex justify-between gap-2">
 
                     {/* Left side */}
@@ -49,16 +51,16 @@ const Header = ({ sum }) => {
                         </div>
 
                         <Link to={"/"}>
-                            <img className="max-[500px]:hidden w-[160px]" src={navlogo} alt="/" />
+                            <img className=" w-[160px]" src={navlogo} alt="/" />
                         </Link>
                     </div>
 
-                    <div className="flex justify-end gap-5 py-1.5">
+                    <div className="flex min-[490px]:gap-5 py-1.5">
 
                         <TimeDelivery />
                         {/* Search Input */}
 
-                        <div className="bg-slate-100 hover:bg-white rounded-full border gap-1 flex items-center py-0.5 px-2 w-[150px] min-[740px]:w-[300px] min-[1120px]:w-[400px]">
+                        <div className="bg-slate-100 hover:bg-white rounded-full border gap-1 flex items-center py-0.5 px-2 w-[150px] max-[530px]:hidden min-[740px]:w-[300px] min-[1120px]:w-[400px]">
                             <AiOutlineSearch size={20} />
                             <input className="bg-transparent py-1  focus:outline-none w-full" type="text" placeholder="Найти блюдо" />
                         </div>
@@ -67,9 +69,17 @@ const Header = ({ sum }) => {
 
                         <div id="scrollFixed" onClick={() => dispatch(setSidebarCart())} className="flex z-30 gap-5">
                             <div className="flex">
-                                <span className="text-xs ml-5  rounded-lg text-black p-1">{sum} ₽</span>
-                                <button className="bg-black text-md hover:text-orange-600 text-white hidden min-[960px]:flex items-center gap-1 py-1.5 rounded-full">
-                                    <BsFillCartFill size={20} className="" /> Корзина
+                                <span className="text-xs ml-5  rounded-lg text-black p-1 flex">
+                                    {sum}
+                                    <span className="ml-1">
+                                        ₽
+                                    </span>
+                                </span>
+                                <button className="bg-black text-md hover:text-orange-600 text-white flex items-center gap-1 py-1.5 rounded-full">
+                                    <BsFillCartFill size={20} className="" />
+                                    <span className="hidden min-[960px]:flex">
+                                        Корзина
+                                    </span>
                                 </button>
                             </div>
                         </div>

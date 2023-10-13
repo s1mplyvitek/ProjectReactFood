@@ -61,7 +61,7 @@ const PopMenu = () => {
                 {/* Filter Price */}
                 <div>
                     <p className="font-bold text-gray-700">Фильтр по цене</p>
-                    <div className="flex justify-between max-w-[390px] w-full">
+                    <div className="flex flex-wrap sm:justify-between max-w-[390px] w-full">
                         <button onClick={() => filterPrice(100)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">100</button>
                         <button onClick={() => filterPrice(150)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">150</button>
                         <button onClick={() => filterPrice(200)} className="m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white">200</button>
@@ -72,7 +72,7 @@ const PopMenu = () => {
 
             {/* pop-up*/}
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+            <div className="grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 pt-4">
                 {foods.map((item) => (
                     <CartProvider>
                         <PopCardsModal key={item.id} item={item} id={item.id} name={item.name} image={item.image} price={item.price} />

@@ -43,14 +43,19 @@ const PopCardsModal = ({ name, image, key, id, price, cart, item }) => {
                 <div className="flex justify-between px-2 py-4">
                     <p className="font-bold">{name}</p>
                     <p>
-                        <span className="bg-orange-500 text-white p-1 px-2 rounded-full">{price} ₽</span>
+                        <span className="bg-orange-500 sm:text-base text-sm text-white p-1 px-2 rounded-full flex">
+                            <span>
+                                {price}
+                            </span>
+                            ₽
+                        </span>
                     </p>
                 </div>
             </div>
 
             <Modal
                 className="fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2
-                 bg-white p-6 rounded-2xl shadow-xl w-2/5 h-auto"
+                 bg-white p-6 rounded-2xl shadow-xl w-full sm:w-4/5 lg:w-2/5 h-auto"
                 overlayClassName="fixed top-0 left-0 bottom-0 right-0 bg-black/50 flex justify-center items-center z-30"
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
@@ -68,7 +73,7 @@ const PopCardsModal = ({ name, image, key, id, price, cart, item }) => {
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora aliquid, commodi neque repellat debitis aliquam!
                             </p>
                             <Link to={`/dish/${id}`}>
-                                <button type="button" class="inline-block w-[200px] rounded border-2 border-neutral-800 px-6 text-[12px] font-medium uppercase leading-normal text-neutral-800 transition duration-150 ease-in-out hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800 focus:border-neutral-800 focus:text-neutral-800 focus:outline-none focus:ring-0 active:border-neutral-900 active:text-neutral-900 dark:border-neutral-900 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 dark:hover:text-neutral-900 dark:focus:border-neutral-900 dark:focus:text-neutral-900 dark:active:border-neutral-900 dark:active:text-neutral-900">
+                                <button type="button" class="inline-block max-w-[150px] rounded border-2 border-neutral-800 px-6 text-[12px] font-medium uppercase leading-normal text-neutral-800 transition duration-150 ease-in-out hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800 focus:border-neutral-800 focus:text-neutral-800 focus:outline-none focus:ring-0 active:border-neutral-900 active:text-neutral-900 dark:border-neutral-900 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 dark:hover:text-neutral-900 dark:focus:border-neutral-900 dark:focus:text-neutral-900 dark:active:border-neutral-900 dark:active:text-neutral-900">
                                     Подробнее
                                 </button>
                             </Link>
@@ -78,7 +83,7 @@ const PopCardsModal = ({ name, image, key, id, price, cart, item }) => {
                     <div className="flex justify-between text-xl items-center">
                         <div>
                             <button onClick={() => { dispatch(addToCart(item)); setPriceStart(false) }} type="button" class="focus:outline-none text-white bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg
-                              px-24 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">
+                              px-12 py-2.5 mr-2 mb-2 max-w-[300px] min-w-auto dark:focus:ring-yellow-900">
                                 Добавить
                             </button>
                         </div>

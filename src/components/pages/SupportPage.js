@@ -21,7 +21,7 @@ const SupportPage = () => {
     return (
         <>
             <div className="w-2/3 mx-auto grow mb-10">
-                <h1 className="text-center text-orange-600 text-3xl font-bold my-7">Поддержка</h1>
+                <h1 className="text-center text-orange-600 text-3xl font-bold py-7 mt-10 min-[530px]:mt-0">Поддержка</h1>
                 <div className="grid bg-slate-300 rounded-lg p-5 text-xl w-2/3 mx-auto mb-5">
                     <ul>
                         {support.map((item) =>

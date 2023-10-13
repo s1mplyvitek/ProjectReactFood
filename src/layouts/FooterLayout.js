@@ -11,7 +11,7 @@ import FooterSocials from "../components/footer/FooterSocials";
 const Footer = () => {
     return (
         <footer className="bg-slate-100">
-            <div className="grid grid-cols-6 w-3/4 mx-auto py-3 text-sm text-gray-500">
+            <div className="flex-wrap gap-5 flex justify-between 2xl:grid-cols-6 w-3/4 mx-auto py-3 text-sm text-gray-500">
                 <FooterLogo />
                 <FooterCompany />
                 <FooterPartners />

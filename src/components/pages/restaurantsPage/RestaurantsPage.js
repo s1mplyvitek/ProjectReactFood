@@ -10,7 +10,7 @@ const RestaurantsPage = () => {
 
     return (
         <div className="w-2/3 mx-auto flex flex-col grow items-center text-xl mb-10">
-            <h2 className="py-5 text-orange-600 font-bold text-3xl">Рестораны</h2>
+            <h2 className="py-5 text-orange-600 font-bold text-3xl mt-10 min-[530px]:mt-0">Рестораны</h2>
             <div className="mb-10">
                 <Maps />
             </div>
