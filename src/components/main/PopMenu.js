@@ -36,10 +36,10 @@ const PopMenu = () => {
     return (
         <div className="px-5 mx-auto py-10 lg:w-3/4 mb-10">
 
-            <h1 className="text-orange-600 font-bold text-4xl text-center pt-10">Популярные блюда</h1>
+            <h1 className="text-orange-600 font-bold text-2xl sm:text-4xl text-center pt-10">Популярные блюда</h1>
 
             {/* Filter Row */}
-            <div className="flex flex-col lg:flex-row justify-between ">
+            <div className="flex flex-col lg:flex-row justify-between text-sm sm:text-base">
 
                 {/* Filter Type */}
                 <div>

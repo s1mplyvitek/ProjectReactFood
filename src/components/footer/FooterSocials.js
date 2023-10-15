@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FooterSocials = () => {
     return (
         <div className="grid justify-items-center">
-            <span className="font-bold text-lg text-gray-700 inline">Наши соцсети</span>
+            <span className="font-bold sm:text-lg text-gray-700 inline">Наши соцсети</span>
 
             <div className="flex gap-5">
                 <Link to="https://github.com/">

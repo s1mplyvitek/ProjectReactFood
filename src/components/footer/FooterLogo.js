@@ -4,7 +4,7 @@ import footlogo from "../../content/footer.png"
 
 const FooterLogo = () => {
     return (
-        <div className="flex flex-col w-40 justify-start">
+        <div className="flex flex-col sm:w-40 justify-start">
             <Link to="/about">
                 <img className="w-40 mb-3" src={footlogo} alt="не загрузилась" />
             </Link>

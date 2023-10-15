@@ -42,7 +42,7 @@ const Header = ({ sum }) => {
     return (
         <>
             <div className="fixed top-0 left-0 right-0 min-[530px]:static  w-full z-10 bg-slate-100">
-                <div className="w-2/3 mx-auto flex justify-between gap-2">
+                <div className="sm:w-2/3 mx-3 sm:mx-auto flex justify-between gap-2">
 
                     {/* Left side */}
                     <div className="flex items-center gap-2">
@@ -60,7 +60,7 @@ const Header = ({ sum }) => {
                         <TimeDelivery />
                         {/* Search Input */}
 
-                        <div className="bg-slate-100 hover:bg-white rounded-full border gap-1 flex items-center py-0.5 px-2 w-[150px] max-[530px]:hidden min-[740px]:w-[300px] min-[1120px]:w-[400px]">
+                        <div className="bg-slate-100 hover:bg-white rounded-full border gap-1 flex items-center py-0.5 px-2 w-[150px] max-[530px]:hidden min-[740px]:w-[200px] min-[1120px]:w-[400px]">
                             <AiOutlineSearch size={20} />
                             <input className="bg-transparent py-1  focus:outline-none w-full" type="text" placeholder="Найти блюдо" />
                         </div>

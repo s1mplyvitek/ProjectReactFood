@@ -55,20 +55,20 @@ const PopCardsModal = ({ name, image, key, id, price, cart, item }) => {
 
             <Modal
                 className="fixed top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2
-                 bg-white p-6 rounded-2xl shadow-xl w-full sm:w-4/5 lg:w-2/5 h-auto"
+                 bg-white p-6 rounded-2xl shadow-xl w-full  sm:w-4/5 lg:w-3/5 xl:w-2/5 h-auto"
                 overlayClassName="fixed top-0 left-0 bottom-0 right-0 bg-black/50 flex justify-center items-center z-30"
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 contentLabel="Example Modal">
                 <div className="grid">
                     <div className="flex justify-between">
-                        <p className="font-bold text-3xl">{name}</p>
+                        <p className="font-bold text-xl sm:text-3xl">{name}</p>
                         <span className="cursor-pointer" onClick={closeModal}><AiOutlineClose /></span>
                     </div>
-                    <div className="flex my-6">
-                        <img className="w-2/5 h-[250px] mr-5 object-cover rounded-xl"
+                    <div className="grid sm:flex my-3 sm:my-6">
+                        <img className=" w-full sm:w-2/5 h-[250px] mr-5 object-cover rounded-xl"
                             src={image} alt={name} />
-                        <div className="w-3/5">
+                        <div className="sm:w-3/5">
                             <p className="indent-5 ">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora aliquid, commodi neque repellat debitis aliquam!
                             </p>
@@ -80,15 +80,15 @@ const PopCardsModal = ({ name, image, key, id, price, cart, item }) => {
                         </div>
 
                     </div>
-                    <div className="flex justify-between text-xl items-center">
+                    <div className="flex max-[380px]:flex-wrap gap-2 justify-between 2xl:text-xl items-center">
                         <div>
                             <button onClick={() => { dispatch(addToCart(item)); setPriceStart(false) }} type="button" class="focus:outline-none text-white bg-orange-600 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg
-                              px-12 py-2.5 mr-2 mb-2 max-w-[300px] min-w-auto dark:focus:ring-yellow-900">
+                              px-8  mr-2 py-2.5  md:w-[200px] 2xl:w-[280px] dark:focus:ring-yellow-900">
                                 Добавить
                             </button>
                         </div>
 
-                        <div>
+                        <div className="max-[450px]:hidden">
                             {cart.map((item) => item.food.id == id ?
                                 <>
                                     <span className="cursor-pointer" onClick={() => { dispatch(decreaseItemQty(item.food.id)) }}>﹤</span>
@@ -102,7 +102,7 @@ const PopCardsModal = ({ name, image, key, id, price, cart, item }) => {
                             {cart.map((item) => item.food.id == id ?
                                 <span>
                                     {item.food.price * item.qty} ₽
-                                </span> : "")} {priceStart ? <span>{price} ₽</span> : ""}
+                                </span> : "")} {priceStart ? <span className="text-base md:text-lg">{price} ₽</span> : ""}
                         </div>
 
                         {!priceStart ? <div onClick={() => { dispatch(setSidebarCart()); closeModal(); }} className="flex cursor-pointer hover:scale-105 duration-200 hover:text-orange-600">

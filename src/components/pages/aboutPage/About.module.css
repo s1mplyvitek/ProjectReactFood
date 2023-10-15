@@ -18,8 +18,6 @@
     text-align: center;
     padding-top: 30%;
     width: 100vw;
-
-
 }
 
 .bg::before {
@@ -37,6 +35,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     transform: translateZ(-1px) scale(2);
+    background-position: center;
 
 }
 
@@ -78,8 +77,9 @@
     transform-origin: center;
     min-height: 80vh;
     background-image: url("https://img.freepik.com/free-photo/empty-white-plate-on-wood-table_1150-12274.jpg?w=1380&t=st=1697036288~exp=1697036888~hmac=8f300ae1033516750ecb298ea039f8deb703d4afe30c828f7cd5a17247c71335");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
+    background-size: contain;
     transform: translateZ(-1px) scale(2);
+    background-position: center;
 
 }

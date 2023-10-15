@@ -3,10 +3,10 @@ const ReviewsPage = () => {
         <>
             <div className="bg-slate-100 grow py-10">
                 <div className="w-2/3 mx-auto">
-                    <h1 className="text-center text-3xl text-orange-600 mb-5 font-bold mt-10 min-[530px]:mt-0">Отзывы</h1>
-                    <div className="text-xl flex justify-center">
+                    <h1 className="text-center text-xl sm:text-3xl text-orange-600 mb-5 font-bold mt-10 min-[530px]:mt-0">Отзывы</h1>
+                    <div className=" min-[350px]:text-xl flex justify-center">
                         <form action="/" method="/"
-                            className="flex gap-10">
+                            className="grid sm:flex gap-10">
                             <div className="grid gap-5">
                                 <p className="grid w-64">
                                     <label for="name" >Имя: </label>
@@ -78,7 +78,7 @@ const ReviewsPage = () => {
                                 </fieldset>
 
                                 <p>
-                                    <button className="text-2xl hover:text-orange-600 active:text-orange-300" type="submit">Отправить</button>
+                                    <button className="sm:text-2xl hover:text-orange-600 active:text-orange-300" type="submit">Отправить</button>
                                 </p>
 
                             </div>

@@ -49,7 +49,7 @@ const NavbarHeader = () => {
 
             <div className={bool
                 ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-40 duration-300"
-                : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-40 duration-300"}>
+                : "fixed top-0 left-[-110%] w-[300px] h-screen bg-white z-40 duration-300"}>
                 <AiOutlineClose
                     onClick={() => dispatch(setSidebar())} size={30} className="absolute right-4 top-4 cursor-pointer" />
                 <h2 className="text-2xl p-4">

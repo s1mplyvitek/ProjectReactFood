@@ -4,7 +4,7 @@
 const FooterContacts = () => {
     return (
         <div>
-            <span className="font-bold text-lg text-gray-700">Контакты</span>
+            <span className="font-bold sm:text-lg text-gray-700">Контакты</span>
             <div className="grid gap-2">
                 <a href="https://tc39.es/ecma262/">Контроль качества</a>
                 <a className="flex" href="tel:+7(123)4567890"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

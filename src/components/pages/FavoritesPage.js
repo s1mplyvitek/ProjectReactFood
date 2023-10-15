@@ -9,13 +9,13 @@ const FavoritesPage = () => {
     const dispatch = useDispatch()
 
     return (
-        <div className="w-2/3 mx-auto py-5 grid grow mb-16 ">
-            <span className="text-center mb-5 text-orange-600 text-3xl font-bold mt-10 min-[530px]:mt-0">Любимые блюда</span>
-            <div className="grid grid-cols-4 gap-3">
+        <div className="px-3 sm:px-0 sm:w-2/3 mx-auto py-5 grid grow mb-16 ">
+            <span className="text-center mb-5 text-orange-600 text-xl sm:text-3xl font-bold mt-10 min-[530px]:mt-0">Любимые блюда</span>
+            <div className="grid min-[450px]:px-16 sm:px-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                 {favor.map((item) =>
                     <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">
                         <Link to={`/dish/${item.food.id}`}>
-                            <img className="h-[200px] w-full object-cover rounded-t-lg" src={item.food.image} alt="/" />
+                            <img className="sm:h-[200px] w-full object-cover rounded-t-lg" src={item.food.image} alt="/" />
                             <div className="p-2">
                                 <p className="text-black font-bold pb-3">{item.food.name}</p>
                                 <p className="pb-3">350 г</p>
@@ -24,7 +24,7 @@ const FavoritesPage = () => {
                             </div>
                         </Link>
                         <div className="flex justify-between mb-2 p-2">
-                            <span className="font-bold text-black text-lg">{item.food.price} ₽</span>
+                            <span className="font-bold text-black sm:text-lg">{item.food.price} ₽</span>
                             <button
                                 onClick={() => dispatch(addToCart(item.food))}
                                 type="button"
@@ -33,10 +33,10 @@ const FavoritesPage = () => {
                                 В корзину
                             </button>
                         </div>
-                        <div className="flex gap-1 text-black p-2 items-center hover:text-orange-600 cursor-pointer"
+                        <div className="flex gap-1 text-black p-2 items-center sm:text-base hover:text-orange-600 cursor-pointer"
                             onClick={() => dispatch(removeFromFavorites(item.food.id))}>
                             <span><AiFillCloseCircle size={30} /></span>
-                            <p className="text-base">Убрать из избранное</p>
+                            <p className="">Убрать из избранное</p>
                         </div>
                     </div>
                 )}

@@ -19,8 +19,8 @@ const SidebarCart = ({ cart, sum }) => {
             {/* Side */}
 
             <div className={bool
-                ? "fixed top-0 right-0 w-[300px] md:w-[450px] h-screen bg-white z-40 duration-300"
-                : "fixed top-0 right-[-100%] w-[300px] h-screen bg-white z-40 duration-300"}>
+                ? "fixed top-0 right-0 w-[280px] min-[280px]:w-[300px] min-[550px]:w-[450px] h-screen bg-white z-40 duration-300"
+                : "fixed top-0 right-[-110%] w-[300px] h-screen bg-white z-40 duration-300"}>
                 <div className="">
                     <AiOutlineClose
                         onClick={() => dispatch(setSidebarCart())} size={30} className="absolute left-4 top-4 cursor-pointer hover:rotate-180 duration-500" />
@@ -30,17 +30,19 @@ const SidebarCart = ({ cart, sum }) => {
                         </h2>
 
                     </div>
-                    <div className="text-center text-2xl grid">
+                    <div className="text-center text-xl sm:text-2xl grid">
                         <span className="">Корзина</span>
                         <div className="text-start text-lg grid px-5">
                             <div className="mb-14">{cart.length > 0 ?
                                 <div>
                                     <div className="my-8">
                                         {cart.map((item) => (
-                                            <div className="flex justify-between items-center gap-1 text-base">
-                                                <div className="flex items-center gap-1 py-1 ">
-                                                    <img className="w-7 h-10 object-cover rounded-sm " src={item.food.image} alt="/" />
-                                                    <span>{item.food.name}</span>
+                                            <div className=" sm:flex justify-between items-center gap-1 sm:text-xl">
+                                                <div className="flex justify-center">
+                                                    <div className="flex items-center gap-1 py-1 mb-3">
+                                                        <img className="w-7 h-10 object-cover rounded-sm " src={item.food.image} alt="/" />
+                                                        <span>{item.food.name}</span>
+                                                    </div>
                                                 </div>
                                                 <div className="flex justify-between items-center">
                                                     <div className="flex items-center text-2xl">
@@ -54,7 +56,7 @@ const SidebarCart = ({ cart, sum }) => {
                                             </div>
                                         ))}
                                     </div>
-                                    <div className="flex gap-3 text-xl justify-between mb-5">
+                                    <div className="flex gap-3 sm:text-xl justify-between mb-5">
                                         <span className="">Выбрано: {cart.length}</span>
                                         <span className="">сумма: <span className="text-orange-600">{sum} ₽</span></span>
                                         <button onClick={() => dispatch(clearCart())} class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">

@@ -20,9 +20,9 @@ const TimeDelivery = () => {
                 </div>
 
                 <div className={closeDeliv ? "hidden" : "flex"}>
-                    <div className={deliv ? "absolute flex flex-col top-10 right-16 w-[800px] h-[400px] bg-white border shadow-lg rounded-lg  z-20" : "hidden"}>
+                    <div className={deliv ? "absolute flex flex-col top-10 right-16 w-[400px] max-h-[700px] bg-white border shadow-lg rounded-lg  z-20" : "hidden"}>
                         <h2 className="text-center text-2xl text-orange-600">Доставка</h2>
-                        <div className="grid grid-cols-2 p-2 gap-3">
+                        <div className="grid grid-cols-1 p-2 gap-3">
                             <div className="text-base indent-5 p-2">
                                 <h3 className="text-center text-xl mb-2">Стандартная доставка</h3>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
@@ -41,9 +41,9 @@ const TimeDelivery = () => {
                         <span className="absolute right-3 text-2xl cursor-pointer hover:scale-110 " onClick={() => setCloseDelive(true)}>x</span>
                     </div>
 
-                    <div className={deliv ? "hidden" : "absolute flex flex-col top-10 left-16 w-[800px] h-[400px] bg-white border shadow-lg rounded-lg  z-20"}>
+                    <div className={deliv ? "hidden" : "absolute flex flex-col top-10 left-16 w-[400px] max-h-[700px] bg-white border shadow-lg rounded-lg  z-20"}>
                         <h2 className="text-center text-2xl text-orange-600">Самовывоз</h2>
-                        <div className="grid grid-cols-2 p-2 gap-3">
+                        <div className="grid grid-cols-1 p-2 gap-3">
                             <div className="text-base indent-5 p-2">
                                 <h3 className="text-center text-xl mb-2">Покупай и забирай!</h3>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>

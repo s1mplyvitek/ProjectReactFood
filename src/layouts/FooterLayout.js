@@ -20,7 +20,7 @@ const Footer = () => {
                 <FooterSocials />
             </div>
             <hr className="mx-auto w-11/12 border-gray-300" />
-            <span className="flex justify-center text-gray-500 text-sm p-4">
+            <span className="flex justify-center text-gray-500 text-[10px] sm:text-sm p-4">
                 <a href="/">© 2023 eDalivery™</a>. All Rights Reserved.
             </span>
         </footer>

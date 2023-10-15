@@ -20,9 +20,9 @@ const SupportPage = () => {
 
     return (
         <>
-            <div className="w-2/3 mx-auto grow mb-10">
-                <h1 className="text-center text-orange-600 text-3xl font-bold py-7 mt-10 min-[530px]:mt-0">Поддержка</h1>
-                <div className="grid bg-slate-300 rounded-lg p-5 text-xl w-2/3 mx-auto mb-5">
+            <div className="md:w-2/3 mx-auto grow mb-10">
+                <h1 className="text-center text-orange-600 text-xl md:text-3xl font-bold py-7 mt-10 min-[530px]:mt-0">Поддержка</h1>
+                <div className="grid bg-slate-300 rounded-lg p-5 sm:text-xl md:w-2/3 mx-auto mb-5">
                     <ul>
                         {support.map((item) =>
                             <li className="mb-6">
@@ -39,14 +39,14 @@ const SupportPage = () => {
                     </ul>
                 </div>
 
-                <div className="w-2/3 mx-auto relative">
-                    <h2 className="text-2xl">Не можете найти нужный ответ?</h2>
-                    <p className="text-xl mb-1">Свяжитесь с нами, и мы поможем вам как можно скорее.</p>
-                    <button onClick={() => setFormOff(false)} className="inline-block rounded border-2 border-neutral-800 px-6 text-md font-medium uppercase leading-normal text-neutral-800 transition duration-150 ease-in-out hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800 focus:border-neutral-800 focus:text-neutral-800 focus:outline-none focus:ring-0 active:border-neutral-900 active:text-neutral-900 dark:border-neutral-900 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 dark:hover:text-neutral-900 dark:focus:border-neutral-900 dark:focus:text-neutral-900 dark:active:border-neutral-900 dark:active:text-neutral-900">
+                <div className="md:w-2/3 px-2 md:px-0 mx-auto relative">
+                    <h2 className="sm:text-2xl">Не можете найти нужный ответ?</h2>
+                    <p className="sm:text-xl mb-1">Свяжитесь с нами, и мы поможем вам как можно скорее.</p>
+                    <button onClick={() => setFormOff(false)} className="inline-block rounded border-2 border-neutral-800 px-6 sm:text-md font-medium uppercase leading-normal text-neutral-800 transition duration-150 ease-in-out hover:border-neutral-800 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-800 focus:border-neutral-800 focus:text-neutral-800 focus:outline-none focus:ring-0 active:border-neutral-900 active:text-neutral-900 dark:border-neutral-900 dark:text-neutral-900 dark:hover:border-neutral-900 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10 dark:hover:text-neutral-900 dark:focus:border-neutral-900 dark:focus:text-neutral-900 dark:active:border-neutral-900 dark:active:text-neutral-900">
                         Написать нам
                     </button>
-                    <div className={formOff ? "hidden" : "absolute w-[700px] h-[700px] shadow-2xl z-30 bottom-0 left-0 bg-slate-50 rounded-lg"}>
-                        <div className="p-5 text-xl">
+                    <div className={formOff ? "hidden" : "absolute max-w-[700px] max-h-[700px] shadow-2xl z-30 bottom-0 left-0 bg-slate-50 rounded-lg"}>
+                        <div className="p-5 sm:text-xl">
                             <form action="/" method="/"
                                 className="gap-3 flex flex-col">
                                 <p>

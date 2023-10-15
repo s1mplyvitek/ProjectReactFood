@@ -12,7 +12,7 @@ const ActionsCards = () => {
     return (
         <>
             <section >
-                <h2 className="text-4xl font-bold text-orange-600 text-center py-5">
+                <h2 className="text-2xl sm:text-4xl font-bold text-orange-600 text-center py-5">
                     Акции
                 </h2>
                 {/* Cards */}
