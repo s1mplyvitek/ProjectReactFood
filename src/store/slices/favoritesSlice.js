@@ -1,11 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const cartStorageString = localStorage.getItem("favoriteStorage");
 
 const initialState = [];
 
 export const favoritesSlice = createSlice({
     name: "favorites",
-    initialState: initialState,
+
+    initialState: cartStorageString
+        ? JSON.parse(cartStorageString)
+        : initialState,
+
     reducers: {
         addToFavorites: (state, action) => {
             let itemToAdd = action.payload;

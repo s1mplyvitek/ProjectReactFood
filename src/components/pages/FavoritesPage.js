@@ -3,10 +3,15 @@ import { Link } from "react-router-dom";
 import { addToCart } from "../../store/slices/cartSlice";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { removeFromFavorites } from "../../store/slices/favoritesSlice";
+import { useEffect } from "react";
 
 const FavoritesPage = () => {
     const favor = useSelector((state) => state.favorites);
     const dispatch = useDispatch()
+
+    useEffect(() => {
+        localStorage.setItem("favoriteStorage", JSON.stringify(favor))
+    }, [favor]);
 
     return (
         <div className="px-3 sm:px-0 sm:w-2/3 mx-auto py-5 grid grow mb-16 ">
