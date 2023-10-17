@@ -1,7 +1,9 @@
-import { useDispatch } from "react-redux";
-import { categories, data } from "../data/data";
+import { useDispatch, useSelector } from "react-redux";
+import { categories } from "../data/data";
 import { Link, useParams } from "react-router-dom";
 import { addToCart } from "../../store/slices/cartSlice";
+import { useEffect } from "react";
+import { getMenu } from "../../store/slices/menuSlice";
 
 
 
@@ -12,13 +14,22 @@ const MenuCategoriesCards = () => {
     const addCategory = categories.find((item) => item.slug == slug)
     let category = addCategory.slug;
 
+    let menu = useSelector((state) => state.menu);
+
     const dispatch = useDispatch();
+
+
+    useEffect(() => {
+        dispatch(getMenu())
+    }, []);
+
+
 
     return (
         <>
             <h2 className="text-center font-bold text-xl sm:text-3xl text-orange-500 p-5 mt-10 min-[530px]:mt-0">{addCategory.name}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-5 sm:px-0 sm:w-2/3 mx-auto mb-16">
-                {data.map((item) => (item.category === category ?
+                {menu.items.map((item) => (item.category === category ?
                     (
                         <div className="border rounded-lg text-sm text-gray-500 shadow-2xl hover:shadow-none duration-300">
                             <Link to={`/dish/${item.id}`}>

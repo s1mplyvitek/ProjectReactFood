@@ -1,14 +1,24 @@
-import React, { useState } from "react";
-import { data } from "../data/data";
+import React, { useEffect, useState } from "react";
 import CartProvider from "../providers/CartProvider";
 import PopCardsModal from "./PopCardsModal";
+import { useDispatch, useSelector } from "react-redux";
+import { getMenu } from "../../store/slices/menuSlice";
+
+
 
 const PopMenu = () => {
+
+    let menu = useSelector((state) => state.menu);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getMenu())
+    }, []);
+
 
 
     let categoryArr = ['burger', 'pizza', 'salad', 'free', 'chicken', "beverages", "dessert", "combo"];
     const popMenu = categoryArr.reduce((acc, category) => {
-        const items = data.filter(item => item.category === category);
+        const items = menu.items.filter(item => item.category === category);
         return acc.concat(items.slice(0, 2));
     }, []);
 

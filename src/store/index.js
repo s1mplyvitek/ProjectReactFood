@@ -7,6 +7,7 @@ import actionsReducer from "./slices/actionsDataSlice";
 import supportReducer from "./slices/supportSlice";
 import sidebarNavReducer from "./slices/sidebarNavSlice";
 import sidebarCartReducer from "./slices/sidebarCartSlice";
+import menuReducer from "./slices/menuSlice";
 
 
 
@@ -21,5 +22,6 @@ export const store = configureStore({
         support: supportReducer,
         navside: sidebarNavReducer,
         cartside: sidebarCartReducer,
+        menu: menuReducer,
     },
 });

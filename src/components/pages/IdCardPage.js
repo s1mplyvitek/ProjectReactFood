@@ -1,14 +1,22 @@
 import { useParams } from "react-router-dom";
-import { data } from "../data/data";
 import { addToCart } from "../../store/slices/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AiFillHeart } from "react-icons/ai";
 import { addToFavorites } from "../../store/slices/favoritesSlice";
+import { useEffect } from "react";
+import { getMenu } from "../../store/slices/menuSlice";
 
 const IdCardPage = () => {
+
+    let menu = useSelector((state) => state.menu);
     const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getMenu())
+    }, []);
+
+
     const { id } = useParams();
-    let elementId = data.find((item) => item.id == id)
+    let elementId = menu.items.find((item) => item.id == id)
 
     return (
         <div className="w-2/3 mx-auto grid md:flex py-5 gap-5 mt-10 min-[530px]:mt-0">
